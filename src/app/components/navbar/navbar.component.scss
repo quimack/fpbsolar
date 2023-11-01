@@ -1,11 +1,17 @@
 header{
-    max-height: 12vh;
+    max-height: 16vh;
     background: transparent;
     width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
 }
 
 .logo{
-    background: center / contain url('../../../assets/images/logo/LOGO.png') no-repeat;
-    height: 100%;
-    width: auto;
+    background: center / contain url('../../../assets/images/logo/LOGOSINFONDO.png') no-repeat;
+    height: 120px;
+    width: 240px;
+    margin-top: 20px;
 }
