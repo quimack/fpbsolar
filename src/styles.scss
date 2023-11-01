@@ -6,4 +6,11 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    // font-family: 'Roboto', sans-serif;
+    font-family: 'halyard-display', sans-serif;
+}
+
+@font-face {
+    font-family: 'halyard-display';
+    src: url('./assets/fonts/Halyard\ Display.otf') format('opentype');
 }
