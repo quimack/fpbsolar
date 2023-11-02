@@ -1,25 +1,81 @@
-.wrapper{
-    font-size: 20px;
-    background-color: rgb(255, 255, 255);
-    padding: 5rem;
-    border-radius: 12px;
-    border: 2px solid #ecb74d;
-    width: 70vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.wrapper {
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 5rem;
+  border-radius: 28px;
+  //   border: 2px solid #ecb74d;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #1a3240;
+  z-index: 3;
+  position: relative;
 
-    .title{
-        font-size: 30px;
+  .step {
+    width: 90%;
+    .title {
+      // color: #2273c8;
+      font-size: 30px;
+      font-family: "stolzl-medium";
+      padding-bottom: 0.5em;
     }
 
-    .options{
+    .options {
+      display: flex;
+      padding-top: 2em;
+      // font-family: 'inter';
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      .option {
+        text-align: center;
+        cursor: pointer;
+        padding: 0.8em;
+        background-color: #ecb74d;
+        //   border: 1px solid #ecb74d;
+        border-radius: 8px;
+        font-weight: 400;
+        height: 3.5em;
+        //   color: #fff;
         display: flex;
-        padding-top: 2em;
-        
-        .option{
-            padding: 0 2em;
-        }
+        justify-content: center;
+        align-items: center;
+      }
     }
+
+    .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      padding-top: 1.5em;
+
+      .flex-row {
+        .input-wrapper {
+          width: 48%;
+        }
+      }
+      .input-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        input {
+          font-size: .9em;
+          padding: .6em .4em;
+          outline: none;
+          color: #1a3240;
+        //   max-height: 2.8em;
+          width: 100%;
+          border-radius: 8px;
+          border: 1px solid #ecb74d;
+          margin-top: 0.3em;
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
 }

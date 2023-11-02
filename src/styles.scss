@@ -10,7 +10,46 @@ body{
     font-family: 'halyard-display', sans-serif;
 }
 
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.primary-button{
+    text-align: center;
+    cursor: pointer;
+    padding: 0.8em;
+    background-color: #ecb74d;
+    border: 1px solid #ecb74d;
+    border-radius: 8px;
+    font-weight: 400;
+    // height: 3.5em;
+    font-size: 20px;
+    color: #1a3240;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.width-100{
+    width: 100%;
+}
+
 @font-face {
     font-family: 'halyard-display';
     src: url('./assets/fonts/Halyard\ Display.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'stolzl-medium';
+    src: url('./assets/fonts/Stolzl-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('./assets/fonts/Inter.otf') format('opentype');
 }
