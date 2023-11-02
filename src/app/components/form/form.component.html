@@ -1,71 +1,78 @@
 <div class="wrapper">
-  <div *ngIf="step1" class="step">
-    <div class="title">¿Dónde quieres instalar tus placas?</div>
-    <div class="options">
-      <div class="option" (click)="setInstallationType(1)">HOGAR</div>
-      <div class="option" (click)="setInstallationType(2)">INDUSTRIAL</div>
-      <div class="option" (click)="setInstallationType(3)">AMPLIACIÓN</div>
-    </div>
-  </div>
-  <div *ngIf="step2" class="step">
-    <div class="title">¿Dónde quieres autoconsumo?</div>
-    <div class="options">
-      <div class="option" (click)="setPlace(1)">CASA</div>
-      <div class="option" (click)="setPlace(2)">PISO</div>
-      <div class="option" (click)="setPlace(3)">COMUNIDAD DE VECINOS</div>
-      <div class="option" (click)="setPlace(4)">NEGOCIO O EMPRESA</div>
-    </div>
-  </div>
-
-  <div *ngIf="step3" class="step">
-    <div class="title">¿Cuál es tu gasto mensual en electricidad?</div>
-    <div class="options">
-      <div class="option" (click)="setMonthlyExpenditure(1)">Menos de 70€</div>
-      <div class="option" (click)="setMonthlyExpenditure(2)">De 70€ a 150€</div>
-      <div class="option" (click)="setMonthlyExpenditure(3)">Más de 150€</div>
-      <div class="option" (click)="setMonthlyExpenditure(4)">No lo sé</div>
-    </div>
-  </div>
-
-  <div *ngIf="step4" class="step">
-    <div class="title">Tus datos:</div>
-
-    <form class="form-wrapper" novalidate [formGroup]="personalDataForm" (ngSubmit)="onSubmit()">
-      <div class="input-wrapper">
-        * Nombre:
-        <input type="text" formControlName="firstName" />
+  <div class="steps-wrapper">
+      <div *ngIf="step1" class="step">
+        <div class="title">¿Dónde quieres instalar tus placas?</div>
+        <div class="options">
+          <div class="option" (click)="setInstallationType(1)">HOGAR</div>
+          <div class="option" (click)="setInstallationType(2)">INDUSTRIAL</div>
+          <div class="option" (click)="setInstallationType(3)">AMPLIACIÓN</div>
+        </div>
       </div>
-
-      <div class="input-wrapper">
-        * Apellidos:
-        <input type="text" formControlName="lastName" />
+      <div *ngIf="step2" class="step">
+        <div class="title">¿Dónde quieres autoconsumo?</div>
+        <div class="options">
+          <div class="option" (click)="setPlace(1)">CASA</div>
+          <div class="option" (click)="setPlace(2)">PISO</div>
+          <div class="option" (click)="setPlace(3)">COMUNIDAD DE VECINOS</div>
+          <div class="option" (click)="setPlace(4)">NEGOCIO O EMPRESA</div>
+        </div>
       </div>
-
-      <div class="flex-row space-between width-100">
+    
+      <div *ngIf="step3" class="step">
+        <div class="title">¿Cuál es tu gasto mensual en electricidad?</div>
+        <div class="options">
+          <div class="option" (click)="setMonthlyExpenditure(1)">Menos de 70€</div>
+          <div class="option" (click)="setMonthlyExpenditure(2)">De 70€ a 150€</div>
+          <div class="option" (click)="setMonthlyExpenditure(3)">Más de 150€</div>
+          <div class="option" (click)="setMonthlyExpenditure(4)">No lo sé</div>
+        </div>
+      </div>
+    
+      <div *ngIf="step4" class="step">
+        <div class="title">Tus datos:</div>
+    
+        <form
+          class="form-wrapper"
+          novalidate
+          [formGroup]="personalDataForm"
+          (ngSubmit)="onSubmit()"
+        >
           <div class="input-wrapper">
-            * Correo electrónico:
-            <input type="text" formControlName="email" />
+            * Nombre:
+            <input type="text" formControlName="firstName" />
           </div>
     
           <div class="input-wrapper">
-            * Teléfono:
-            <input type="text" formControlName="phone" />
-          </div>
-      </div>
-
-      <div class="flex-row space-between width-100">
-          <div class="input-wrapper">
-            * Código postal:
-            <input type="text" formControlName="cp" />
+            * Apellidos:
+            <input type="text" formControlName="lastName" />
           </div>
     
-          <div class="input-wrapper">
-            * Población:
-            <input type="text" formControlName="population" />
+          <div class="flex-row space-between width-100">
+            <div class="input-wrapper">
+              * Correo electrónico:
+              <input type="text" formControlName="email" />
+            </div>
+    
+            <div class="input-wrapper">
+              * Teléfono:
+              <input type="text" formControlName="phone" />
+            </div>
           </div>
+    
+          <div class="flex-row space-between width-100">
+            <div class="input-wrapper">
+              * Código postal:
+              <input type="text" formControlName="cp" />
+            </div>
+    
+            <div class="input-wrapper">
+              * Población:
+              <input type="text" formControlName="population" />
+            </div>
+          </div>
+    
+          <button class="primary-button mt-1" type="submit">Enviar</button>
+        </form>
       </div>
-
-      <button class="primary-button mt-1" type="submit">Enviar</button>
-    </form>
   </div>
 </div>
