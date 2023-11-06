@@ -1,87 +1,122 @@
 .wrapper {
-    width: 100vw;  
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 3em 0;
+  .steps-wrapper {
+    font-size: 20px;
+    // background-color: rgb(255, 255, 255);
+    padding: 5rem;
+    border-radius: 28px;
+    width: 70%;
     display: flex;
-    justify-content: center;
-    padding: 3em 0;  
-    .steps-wrapper{
-        font-size: 20px;
-        background-color: rgb(255, 255, 255);
-        padding: 5rem;
-        border-radius: 28px;
-        //   border: 2px solid #ecb74d;
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        color: #1a3240;
-        z-index: 3;
-        position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #1a3240;
+    z-index: 3;
+    position: relative;
 
-    }
-  .step {
-    width: 90%;
-    .title {
-      // color: #2273c8;
-      font-size: 30px;
-      font-family: "stolzl-medium";
-      padding-bottom: 0.5em;
+    &:hover {
+      background-color: #fff;
+      transition: 5s;
+      box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
+      -webkit-box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
+      -moz-box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
     }
 
-    .options {
-      display: flex;
-      padding-top: 2em;
-      // font-family: 'inter';
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-
-      .option {
-        text-align: center;
-        cursor: pointer;
-        padding: 0.8em;
-        background-color: #ecb74d;
-        //   border: 1px solid #ecb74d;
-        border-radius: 8px;
-        font-weight: 400;
-        height: 3.5em;
-        //   color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    .back-btn {
+      position: absolute;
+      top: 1.5em;
+      left: 0;
     }
 
-    .form-wrapper {
+    .step {
+      width: 90%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 100%;
-      padding-top: 1.5em;
+      align-items: center;
 
-      .flex-row {
-        .input-wrapper {
-          width: 48%;
+      .title {
+        font-size: 30px;
+        font-family: "stolzl-medium";
+        padding-bottom: 2.5em;
+        // padding-top: 2em;
+        text-align: center;
+      }
+
+      .options {
+        // font-family: 'inter';
+        width: 100%;
+        max-width: 650px;
+        display: flex;
+        justify-content: space-around;
+
+        .option {
+          text-align: center;
+          cursor: pointer;
+          padding: 0.8em;
+          // background-color: #fff;
+          border: 2px solid #ecb74d;
+          border-radius: 8px;
+          font-weight: 400;
+          max-width: 160px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          span {
+            padding: 0.5em 0 0 0;
+          }
+
+          &:hover {
+            transform: scale(1.06);
+            transition: 0.6s;
+            // background-color: #fff;
+            background-color: #ecb74d;
+          }
         }
       }
-      .input-wrapper {
-        width: 100%;
+
+      .form-wrapper {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        width: 100%;
 
-        input {
-          font-size: .9em;
-          padding: .6em .4em;
-          outline: none;
-          color: #1a3240;
-        //   max-height: 2.8em;
+        .flex-row {
+          .input-wrapper {
+            width: 48%;
+          }
+        }
+        .input-wrapper {
           width: 100%;
-          border-radius: 8px;
-          border: 1px solid #ecb74d;
-          margin-top: 0.3em;
-          margin-bottom: 1em;
+          display: flex;
+          flex-direction: column;
+
+          input {
+            font-size: 0.9em;
+            padding: 0.6em 0.4em;
+            outline: none;
+            color: #1a3240;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #ecb74d;
+            margin-top: 0.3em;
+            margin-bottom: 1em;
+          }
+        }
+
+        button {
+          margin-top: 1em;
         }
       }
     }
   }
+}
+
+@media screen and (max-width: 850px) {
+  // Aca hay que bajar el font-size
 }

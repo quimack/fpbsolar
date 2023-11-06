@@ -1,55 +1,69 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    // font-family: 'Roboto', sans-serif;
-    font-family: 'halyard-display', sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "halyard-display", sans-serif;
 }
 
-.flex-row{
-    display: flex;
-    flex-direction: row;
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
-.space-between{
-    justify-content: space-between;
+.space-between {
+  justify-content: space-between;
 }
 
-.primary-button{
-    text-align: center;
-    cursor: pointer;
-    padding: 0.8em;
-    background-color: #ecb74d;
-    border: 1px solid #ecb74d;
-    border-radius: 8px;
-    font-weight: 400;
-    // height: 3.5em;
-    font-size: 20px;
-    color: #1a3240;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.primary-button {
+  text-align: center;
+  cursor: pointer;
+  padding: 0.6em;
+  background-color: #ecb74d;
+  border: 1px solid #ecb74d;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #1a3240;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.width-100{
-    width: 100%;
+.width-100 {
+  width: 100%;
+}
+
+.width-30 {
+  width: 30%;
+}
+
+.width-22 {
+  width: 22%;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #1a3240;
 }
 
 @font-face {
-    font-family: 'halyard-display';
-    src: url('./assets/fonts/Halyard\ Display.otf') format('opentype');
+  font-family: "halyard-display";
+  src: url("./assets/fonts/Halyard\ Display.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'stolzl-medium';
-    src: url('./assets/fonts/Stolzl-Medium.otf') format('opentype');
+  font-family: "stolzl-medium";
+  src: url("./assets/fonts/Stolzl-Medium.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'inter';
-    src: url('./assets/fonts/Inter.otf') format('opentype');
+  font-family: "inter";
+  src: url("./assets/fonts/Inter.otf") format("opentype");
 }

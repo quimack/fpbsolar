@@ -8,12 +8,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  
-  step1: boolean = true;
-  step2: boolean = false;
-  step3: boolean = false;
-  step4: boolean = false;
-  step5: boolean = false;
+  step: number = 1;
+  lastStep: number = 1;
+  // step1: boolean = true;
+  // step2: boolean = false;
+  // step3: boolean = false;
+  // step4: boolean = false;
+  // step5: boolean = false;
 
 
 
@@ -40,31 +41,45 @@ export class FormComponent implements OnInit {
     console.log("aslj")
     this.installationType = typeId;
 
-    this.step1 = false;
+    // this.step1 = false;
+    this.lastStep = Number(this.step);
 
     if(typeId === InstallationType.HOGAR){
-      this.step2 = true;
+      // this.step2 = true;
+      this.step = 2;
     }else{
-      this.step4 = true;
+      // this.step4 = true;
+      this.step = 4;
     }
   }
 
   setPlace(placeId: Place){
     this.place = placeId;
 
-    this.step2 = false;
-    this.step3 = true;
+    // this.step2 = false;
+    // this.step3 = true;
+    this.lastStep = Number(this.step);
+
+    this.step = 3;
   }
 
   setMonthlyExpenditure(value: MonthlyExpenditure){
     this.monthlyExpenditure = value;
 
-    this.step3 = false;
-    this.step4 = true;
+    // this.step3 = false;
+    // this.step4 = true;
+    this.lastStep = Number(this.step);
+    this.step = 4;
   }
 
   onSubmit(){
     console.log(this.personalDataForm)
   }
 
+  backStep(){
+    if(this.step > 1){
+      this.step = Number(this.lastStep);
+      this.lastStep = this.step - 1;
+    }
+  }
 }
