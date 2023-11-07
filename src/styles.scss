@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: "halyard-display", sans-serif;
+  font-family: "titillium-web", sans-serif;
 }
 
 .flex-row {
@@ -66,4 +66,24 @@ button {
 @font-face {
   font-family: "inter";
   src: url("./assets/fonts/Inter.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "inter-bold";
+  src: url("./assets/fonts/Inter-bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "titillium-bold-web";
+  src: url("./assets/fonts/Titillium\ WebBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "titillium-web";
+  src: url("./assets/fonts/Titillium\ Web.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "titillium-web-light";
+  src: url("./assets/fonts/Titillium\ WebThin\ V2.otf") format("opentype");
 }

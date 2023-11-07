@@ -1,0 +1,28 @@
+.card-wrapper {
+  border-radius: 12px;
+  background-color: #fff;
+  color: #1a3240;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .card-content {
+    min-width: 10vw;
+    text-align: center;
+    .icon {
+      padding-bottom: 1em;
+    }
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      font-family: "titillium-bold-web", sans-serif;
+    }
+    .txt-content {
+      color: #868686;
+      font-size: 16px;
+      font-family: "inter", sans-serif;
+    }
+  }
+}
