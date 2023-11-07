@@ -1,25 +1,33 @@
 .wrapper {
   width: 100vw;
+  height: 70vh;
   display: flex;
   justify-content: center;
-  padding: 3em 0;
+  // padding: 3em 0;
+  padding-bottom: 5vh;
+  position: relative;
+  top: -10vh;
   .steps-wrapper {
-    font-size: 20px;
-    // background-color: rgb(255, 255, 255);
-    padding: 5rem;
-    border-radius: 28px;
     width: 70%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    color: #1a3240;
     z-index: 3;
     position: relative;
-
+    font-size: 1.3em;
+    padding: 5rem;
+    border-radius: 28px;
+    color: #1a3240;
+    background-color: #fff;
+    transition: 1.5s;
+    box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
+    -webkit-box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
+    -moz-box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
     &:hover {
       background-color: #fff;
-      transition: 5s;
+      transition: 1.5s;
       box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
       -webkit-box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
       -moz-box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
@@ -32,23 +40,20 @@
     }
 
     .step {
-      width: 90%;
+      height: 100%;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
-      
+
       .title {
         font-family: "titillium-bold-web", sans-serif;
-        font-size: 30px;
-        // font-family: "stolzl-medium";
-        padding-bottom: 2.5em;
-        // padding-top: 2em;
+        font-size: 1.4em;
         text-align: center;
       }
 
       .options {
-        // font-family: 'inter';
         width: 100%;
         max-width: 650px;
         display: flex;
@@ -56,11 +61,10 @@
         font-family: "inter", sans-serif;
 
         .option {
-          font-size: .85em;
+          font-size: 0.85em;
           text-align: center;
           cursor: pointer;
           padding: 1em;
-          // background-color: #fff;
           border: 2px solid #ecb74d;
           border-radius: 8px;
           font-weight: 400;
@@ -98,10 +102,11 @@
           width: 100%;
           display: flex;
           flex-direction: column;
+          font-size: 0.9em;
 
           input {
             font-size: 0.9em;
-            padding: 0.6em 0.4em;
+            padding: 0.4em 0.4em;
             outline: none;
             color: #1a3240;
             width: 100%;
@@ -112,7 +117,8 @@
           }
         }
 
-        button {
+        .primary-btn {
+          font-size: .9em;
           margin-top: 1em;
         }
       }

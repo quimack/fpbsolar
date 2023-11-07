@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,8 +76,10 @@
     transition: background-color 0.3s;
     margin: 0 10px;
     font-size: 18px;
-    border-width: 2px 2px 2px 2px;
+    border-width: 2px;
     border-color: #f6d707;
+    text-decoration: none;
+
     &:hover {
       background-color: #1a3240;
       color: #ffff;
