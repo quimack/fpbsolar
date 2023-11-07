@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomeComponent implements OnInit {
   images: string[] = [
-    '../../../assets/images/installations/Vilarmaior.jpeg',
     '../../../assets/images/installations/Frades.jpeg',
+    '../../../assets/images/installations/Vilarmaior.jpeg',
     '../../../assets/images/installations/Cambados.jpeg',
     '../../../assets/images/installations/Baiona.jpg',
     '../../../assets/images/installations/Silleda.jpeg',
