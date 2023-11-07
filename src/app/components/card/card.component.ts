@@ -9,7 +9,7 @@ export class CardComponent implements OnInit {
   @Input() iconSrc: string | null = null;
   @Input() txt: string = "";
   @Input() title: string = ""; 
-   
+  @Input() size: "s" | "m" | "l" = "s"; 
 
   
   constructor() { }

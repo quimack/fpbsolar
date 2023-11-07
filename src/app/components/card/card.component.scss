@@ -1,3 +1,5 @@
+@import "../../../variables";
+
 .card-wrapper {
   border-radius: 12px;
   background-color: #fff;
@@ -7,22 +9,41 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
+  max-width: 300px;
   .card-content {
     min-width: 10vw;
     text-align: center;
+
     .icon {
       padding-bottom: 1em;
     }
+
     h2 {
       margin: 0;
-      font-size: 24px;
-      font-family: "titillium-bold-web", sans-serif;
+      &.s {
+        font-size: 1.6em;
+        font-weight: bold;
+        font-family: "titillium-web", sans-serif;
+      }
+      &.m {
+        font-family: "titillium-web-light", sans-serif;
+        color: $terciary;
+        font-size: .9em;
+      }
     }
+
     .txt-content {
-      color: #868686;
-      font-size: 16px;
-      font-family: "inter", sans-serif;
+      &.s {
+        color: $grey-light;
+        font-size: 1em;
+        font-family: "inter", sans-serif;
+      }
+      &.m {
+        margin: .5em 0;
+        color: $grey-dark;
+        font-size: 2em;
+        font-family: "titillium-bold-web", sans-serif;
+      }
     }
   }
 }

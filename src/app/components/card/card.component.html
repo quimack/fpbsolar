@@ -1,7 +1,7 @@
 <div class="card-wrapper">
     <div class="card-content">
         <img class="icon" [src]="iconSrc" alt="">
-        <h2>{{title}}</h2>
-        <p class="txt-content">{{txt}}</p>
+        <h2 [ngClass]="{'s': size === 's', 'm': size === 'm'}">{{title}}</h2>
+        <p class="txt-content" [ngClass]="{'s': size === 's', 'm': size === 'm'}">{{txt}}</p>
     </div>
 </div>

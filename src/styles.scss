@@ -1,5 +1,11 @@
+@import "./_variables";
+
 * {
   box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
@@ -7,6 +13,8 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "titillium-web", sans-serif;
+  color: $grey-dark;
+  font-size: 16px;
 }
 
 .flex-row {
@@ -14,23 +22,51 @@ body {
   flex-direction: row;
 }
 
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.flex-end{
+  justify-content: flex-end;
+}
+
 .space-between {
   justify-content: space-between;
 }
 
-.primary-button {
+.space-around{
+  justify-content: space-around;
+}
+
+.primary-btn {
+  background-color: #f6d707;
   text-align: center;
-  cursor: pointer;
-  padding: 0.6em;
-  background-color: #ecb74d;
-  border: 1px solid #ecb74d;
-  border-radius: 8px;
-  font-weight: 400;
-  font-size: 20px;
   color: #1a3240;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: .8em 1.5em;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  font-size: 1em;
+  font-family: "inter", sans-serif;
+
+  &:hover {
+    background-color: #1a3240;
+    color: #ffff;
+  }
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: $grey-dark;
 }
 
 .width-100 {
@@ -45,12 +81,19 @@ body {
   width: 22%;
 }
 
-button {
-  cursor: pointer;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  color: #1a3240;
+.section-wrapper{
+  width: 100vw;
+  padding: 5vw;
+}
+
+.primary-color{
+  color: $primary;
+}
+.secondary-color{
+  color: $secondary;
+}
+.terciary-color{
+  color: $terciary;
 }
 
 @font-face {
