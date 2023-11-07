@@ -37,10 +37,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
+      
       .title {
+        font-family: "titillium-bold-web", sans-serif;
         font-size: 30px;
-        font-family: "stolzl-medium";
+        // font-family: "stolzl-medium";
         padding-bottom: 2.5em;
         // padding-top: 2em;
         text-align: center;
@@ -52,11 +53,13 @@
         max-width: 650px;
         display: flex;
         justify-content: space-around;
+        font-family: "inter", sans-serif;
 
         .option {
+          font-size: .85em;
           text-align: center;
           cursor: pointer;
-          padding: 0.8em;
+          padding: 1em;
           // background-color: #fff;
           border: 2px solid #ecb74d;
           border-radius: 8px;
