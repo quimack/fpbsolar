@@ -18,44 +18,90 @@
     background-color: transparent;
   }
 
-  .gradient{
+  .gradient {
     width: 100vw;
     height: 65vh;
     position: absolute;
     top: 0;
     z-index: 2;
-    background: linear-gradient(180deg, rgba(32,98,161,0.9) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(32, 98, 161, 0.9) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 
   .title {
     position: absolute;
     top: 32vh;
     font-size: 2rem;
-    color: #FFFFFF;
+    color: #ffffff;
     max-width: 700px;
     z-index: 3;
   }
-  
-  .welcome{
+
+  .welcome {
     text-align: center;
     margin: 0;
     font-size: 16px;
-    font-family: 'titillium-web-light', sans-serif;
-
+    font-family: "titillium-web-light", sans-serif;
   }
-  .title-h1{
+  .title-h1 {
     font-family: "titillium-bold-web";
     line-height: 1;
     font-size: 55px;
     text-align: center;
     margin: 0;
-    padding: .4em 0;
+    padding: 0.4em 0;
   }
-  .sub-title{
+  .sub-title {
     padding: 0 1.1em;
     font-size: 24px;
     text-align: center;
     margin: 0;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .button-one {
+    width: 100%;
+    background-color: #f6d707;
+    color: #1a3240;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+    font-size: 18px;
+    border-width: 2px 2px 2px 2px;
+    border-color: #f6d707;
+    &:hover {
+      background-color: #1a3240;
+      color: #ffff;
+    }
+  }
+  .button-two {
+    width: 100%;
+    background-color: #02010100;
+    color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 5px; /* Redondear las esquinas */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+    font-size: 18px;
+    border-width: 2px 2px 2px 2px;
+    border-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    &:hover {
+      background-color: #1a3240;
+      color: #ffff;
+      border: 2px solid #1a3240
+    }
+
   }
 }
 
