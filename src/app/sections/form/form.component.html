@@ -5,7 +5,7 @@
   <div class="steps-wrapper">
     <div *ngIf="step === 1" class="step" [@fadeInOut]="step === 1">
       <div class="title">¿Dónde quieres instalar tus placas?</div>
-      <div class="options step1">
+      <div class="options">
         <form action="" [formGroup]="installationForm">
           <div class="option">
             <input
@@ -188,12 +188,12 @@
       >
         <div class="flex-row space-between width-100">
           <div class="input-wrapper">
-            * Nombre:
+            * Nombre/s:
             <input type="text" formControlName="firstName" />
           </div>
 
           <div class="input-wrapper">
-            * Apellidos:
+            * Apellido/s:
             <input type="text" formControlName="lastName" />
           </div>
         </div>
@@ -206,14 +206,14 @@
 
           <div class="input-wrapper">
             * Teléfono:
-            <input type="text" formControlName="phone" />
+            <input type="number" formControlName="phone" />
           </div>
         </div>
 
         <div class="flex-row space-between width-100">
           <div class="input-wrapper">
             * Código postal:
-            <input type="text" formControlName="cp" />
+            <input type="number" formControlName="cp" />
           </div>
 
           <div class="input-wrapper">
@@ -222,7 +222,7 @@
           </div>
         </div>
 
-        <button class="primary-btn" type="submit">Enviar</button>
+        <button class="primary-btn" [class.disabled]="installationForm.invalid || personalDataForm.invalid" type="submit">Enviar</button>
       </form>
     </div>
 

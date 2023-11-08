@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InstallationType, Place, MonthlyExpenditure } from '../../models/formData';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, RequiredValidator, Validators } from '@angular/forms';
 import { fadeInOutAnimation } from 'src/assets/animations';
 
 @Component({
@@ -18,18 +18,18 @@ export class FormComponent implements OnInit {
   monthlyExpenditure: MonthlyExpenditure = MonthlyExpenditure.NO_LO_SE;
 
   installationForm = new FormGroup({
-    installationType: new FormControl(null),
+    installationType: new FormControl(null, Validators.required),
     place: new FormControl(null),
-    monthlyExpenditure: new FormControl(null, Validators.email),
+    monthlyExpenditure: new FormControl(null),
   });
 
   personalDataForm = new FormGroup({
-    firstName: new FormControl("", Validators.minLength(3)),
-    lastName: new FormControl(""),
-    email: new FormControl("", Validators.email),
-    phone: new FormControl(""),
-    cp: new FormControl(""),
-    population: new FormControl(""),
+    firstName: new FormControl("", [Validators.minLength(3), Validators.required]),
+    lastName: new FormControl("", [Validators.minLength(3), Validators.required]),
+    email: new FormControl("", [Validators.email, Validators.required]),
+    phone: new FormControl("", Validators.required),
+    cp: new FormControl("", Validators.required),
+    population: new FormControl("", Validators.required),
   });
 
   constructor() { }
