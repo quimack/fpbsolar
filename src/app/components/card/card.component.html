@@ -1,7 +1,22 @@
-<div class="card-wrapper">
-    <div class="card-content">
-        <img class="icon" [src]="iconSrc" alt="">
-        <h2 [ngClass]="{'s': size === 's', 'm': size === 'm'}">{{title}}</h2>
-        <p class="txt-content" [ngClass]="{'s': size === 's', 'm': size === 'm'}">{{txt}}</p>
-    </div>
+<div
+  class="card-wrapper"
+  [ngClass]="{ s: size === 's', m: size === 'm', l: size === 'l' }"
+>
+  <div class="img" [style.background-image]="'url(' + imgSrc + ')'"></div>
+
+  <div
+    class="card-content"
+    [ngClass]="{ s: size === 's', m: size === 'm', l: size === 'l' }"
+  >
+    <img class="icon" [src]="iconSrc" alt="" />
+    <h2 [ngClass]="{ s: size === 's', m: size === 'm', l: size === 'l' }">
+      {{ title }}
+    </h2>
+    <p
+      class="txt-content"
+      [ngClass]="{ s: size === 's', m: size === 'm', l: size === 'l' }"
+    >
+      {{ txt }}
+    </p>
+  </div>
 </div>

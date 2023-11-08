@@ -1,6 +1,8 @@
 @import "../../../variables";
 
 .card-wrapper {
+  position: relative;
+  z-index: 5;
   border-radius: 12px;
   background-color: #fff;
   color: #1a3240;
@@ -10,10 +12,41 @@
   justify-content: flex-start;
   align-items: center;
   max-width: 300px;
+
+  &.l {
+    height: 75vh;
+    max-width: 42vw;
+    width: 100%;
+    padding: 0;
+
+    .img {
+      border-radius: 12px 12px 0 0;
+      height: 50%;
+      width: 100%;
+      max-width: 100%;
+      background-size: 110%;
+      background-repeat: no-repeat;
+      transition: background-position 0.3s;
+      &:hover {
+        background-position: 0 50%;
+        filter: brightness(0.6); 
+      }
+    }
+    .card-content {
+      // height: 50%;
+      padding: 2em;
+      border-radius: 0 12px 12px;
+    }
+  }
+
   .card-content {
     min-width: 10vw;
     text-align: center;
 
+    &.l {
+      padding-top: 2em;
+      text-align: start;
+    }
     .icon {
       padding-bottom: 1em;
     }
@@ -28,18 +61,25 @@
       &.m {
         font-family: "titillium-web-light", sans-serif;
         color: $terciary;
-        font-size: .9em;
+        font-size: 0.9em;
+      }
+
+      &.l {
+        line-height: 1.2;
+        font-size: 1.5em;
+        font-weight: bold;
+        font-family: "titillium-web", sans-serif;
       }
     }
 
     .txt-content {
-      &.s {
+      &.s, &.l{
         color: $grey-light;
         font-size: 1em;
         font-family: "inter", sans-serif;
       }
       &.m {
-        margin: .5em 0;
+        margin: 0.5em 0;
         color: $grey-dark;
         font-size: 2em;
         font-family: "titillium-bold-web", sans-serif;

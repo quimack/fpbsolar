@@ -33,7 +33,7 @@
 
   .title {
     position: absolute;
-    top: 32vh;
+    top: 31vh;
     font-size: 2rem;
     color: #ffffff;
     max-width: 700px;
@@ -98,6 +98,7 @@
     border-width: 2px 2px 2px 2px;
     border-color: #FFFFFF;
     border: 2px solid #FFFFFF;
+    text-decoration: none;
     &:hover {
       background-color: #1a3240;
       color: #ffff;
