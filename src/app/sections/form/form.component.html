@@ -1,0 +1,258 @@
+<section class="wrapper" id="form">
+  <div class="bckgr"></div>
+  <div class="bckgr2"></div>
+
+  <div class="steps-wrapper">
+    <div *ngIf="step === 1" class="step" [@fadeInOut]="step === 1">
+      <div class="title">¿Dónde quieres instalar tus placas?</div>
+      <div class="options">
+        <form action="" [formGroup]="installationForm">
+          <div class="option">
+            <input
+              formControlName="installationType"
+              type="radio"
+              [value]="1"
+              id="home"
+            />
+            <label for="home">HOGAR</label>
+          </div>
+          <div class="option">
+            <input
+              type="radio"
+              formControlName="installationType"
+              [value]="2"
+              id="industrial"
+            />
+            <label for="industrial">INDUSTRIAL</label>
+          </div>
+          <div class="option">
+            <input
+              formControlName="installationType"
+              type="radio"
+              [value]="3"
+              id="extension"
+            />
+            <label for="extension">AMPLIACIÓN</label>
+          </div>
+        </form>
+        <!--         
+        <div class="option width-30" (click)="setInstallationType(1)">
+          <input *ngIf="installationType !== 1" type="radio" name="home" id="home">
+          <img  *ngIf="installationType === 1" src="../../../assets/icons/house-50-green.png" alt="" />
+          <span *ngIf="installationType !== 1">HOGAR</span>
+        </div>
+        <div class="option width-30" (click)="setInstallationType(2)">
+          <input  type="radio" name="industrial" id="industrial">
+           <img *ngIf="installationType === 2" src="../../../assets/icons/company2-50-green.png" alt="" width="30%"/>
+          <span *ngIf="installationType !== 2">INDUSTRIAL</span>
+        </div>
+        <div class="option width-30" (click)="setInstallationType(3)">
+          <input *ngIf="installationType !== 3" type="radio" name="extension" id="extension">
+          <img src="../../../assets/icons/solar-energy-50-green.png" alt="" />
+          <span>AMPLIACIÓN</span>
+        </div> -->
+      </div>
+    </div>
+    <div *ngIf="step === 2" class="step" [@fadeInOut]="step === 2">
+      <!-- <div class="title">¿Dónde quieres autoconsumo?</div> -->
+      <div class="title">¿Dónde quieres instalar tus placas?</div>
+      <div class="options">
+        <form action="" [formGroup]="installationForm">
+          <div class="option">
+            <input
+              formControlName="place"
+              type="radio"
+              [value]="1"
+              id="house"
+            />
+            <label for="home">CASA</label>
+          </div>
+          <div class="option">
+            <input
+              formControlName="place"
+              type="radio"
+              [value]="2"
+              id="appartment"
+            />
+            <label for="industrial">PISO</label>
+          </div>
+          <div class="option">
+            <input
+              formControlName="place"
+              type="radio"
+              [value]="3"
+              id="neighborhood"
+            />
+            <label for="extension">COMUNIDAD DE VECINOS</label>
+          </div>
+          <div class="option">
+            <input
+              formControlName="place"
+              type="radio"
+              [value]="4"
+              id="business"
+            />
+            <label for="extension">NEGOCIO O EMPRESA</label>
+          </div>
+        </form>
+      </div>
+
+      <!-- <div class="options">
+        <div class="option width-22" (click)="setPlace(1)">
+          <img src="../../../assets/icons/house-50.png" alt="" />
+          <span>CASA</span>
+        </div>
+        <div class="option width-22" (click)="setPlace(2)">
+          <img src="../../../assets/icons/apartment-50.png" alt="" />
+          <span>PISO</span>
+        </div>
+        <div class="option width-22" (click)="setPlace(3)">
+          <img src="../../../assets/icons/neighborhood-50.png" alt="" />
+          <span>COMUNIDAD DE VECINOS</span>
+        </div>
+        <div class="option width-22" (click)="setPlace(4)">
+          <img src="../../../assets/icons/business-50.png" alt="" />
+          <span>NEGOCIO O EMPRESA</span>
+        </div>
+      </div> -->
+    </div>
+
+    <div *ngIf="step === 3" class="step" [@fadeInOut]="step === 3">
+      <div class="title">¿Cuál es tu gasto mensual en electricidad?</div>
+      <div class="options">
+        <form action="" [formGroup]="installationForm">
+          <div class="option">
+            <input
+              formControlName="monthlyExpenditure"
+              type="radio"
+              [value]="1"
+              id="60"
+            />
+            <label for="home">Menos de 60€</label>
+          </div>
+          <div class="option">
+            <input
+              formControlName="monthlyExpenditure"
+              type="radio"
+              [value]="2"
+              id="60-140"
+            />
+            <label for="industrial">De 60€ a 140€</label>
+          </div>
+          <div class="option">
+            <input
+              formControlName="monthlyExpenditure"
+              type="radio"
+              [value]="3"
+              id="140"
+            />
+            <label for="extension">Más de 140€</label>
+          </div>
+          <div class="option">
+            <input
+              formControlName="monthlyExpenditure"
+              type="radio"
+              [value]="4"
+              id="dontknow"
+            />
+            <label for="extension">No lo sé</label>
+          </div>
+        </form>
+        <!-- <div class="option width-22" (click)="setMonthlyExpenditure(1)">
+          <img src="../../../assets/icons/euro-50.png" alt="" />
+          <span>Menos de 60€</span>
+        </div>
+        <div class="option width-22" (click)="setMonthlyExpenditure(2)">
+          <img src="../../../assets/icons/euro-50.png" alt="" />
+          <span>De 60€ a 140€</span>
+        </div>
+        <div class="option width-22" (click)="setMonthlyExpenditure(3)">
+          <img src="../../../assets/icons/euro-50.png" alt="" />
+          <span>Más de 140€</span>
+        </div>
+        <div class="option width-22" (click)="setMonthlyExpenditure(4)">
+          <img src="../../../assets/icons/dont-know-50.png" alt="" />
+          <span>No lo sé</span>
+        </div> -->
+      </div>
+    </div>
+
+    <div *ngIf="step === 4" class="step" [@fadeInOut]="step === 4">
+      <div class="title">Tus datos:</div>
+
+      <form
+        class="form-wrapper"
+        novalidate
+        [formGroup]="personalDataForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <div class="flex-row space-between width-100">
+          <div class="input-wrapper">
+            * Nombre/s:
+            <input type="text" formControlName="firstName" />
+          </div>
+
+          <div class="input-wrapper">
+            * Apellido/s:
+            <input type="text" formControlName="lastName" />
+          </div>
+        </div>
+
+        <div class="flex-row space-between width-100">
+          <div class="input-wrapper">
+            * Correo electrónico:
+            <input type="text" formControlName="email" />
+          </div>
+
+          <div class="input-wrapper">
+            * Teléfono:
+            <input type="number" formControlName="phone" />
+          </div>
+        </div>
+
+        <div class="flex-row space-between width-100">
+          <div class="input-wrapper">
+            * Código postal:
+            <input type="number" formControlName="cp" />
+          </div>
+
+          <div class="input-wrapper">
+            * Población:
+            <input type="text" formControlName="population" />
+          </div>
+        </div>
+
+        <button class="primary-btn" [class.disabled]="installationForm.invalid || personalDataForm.invalid" type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <button
+      *ngIf="step > 1"
+      class="back-btn"
+      (click)="backStep()"
+      [@fadeInOut]="step > 1"
+    >
+      <img src="../../../assets/icons/back-50.png" alt="Volver" width="60%" />
+    </button>
+    <button
+      *ngIf="
+        (step === 1 &&
+          installationForm.get('installationType')?.value !== null) ||
+        (step === 2 && installationForm.get('place')?.value !== null) ||
+        (step === 3 &&
+          installationForm.get('monthlyExpenditure')?.value !== null)
+      "
+      [@fadeInOut]="
+        (step === 1 &&
+          installationForm.get('installationType')?.value !== null) ||
+        (step === 2 && installationForm.get('place')?.value !== null) ||
+        (step === 3 &&
+          installationForm.get('monthlyExpenditure')?.value !== null)
+      "
+      class="next-btn"
+      (click)="nextStep()"
+    >
+      <img src="../../../assets/icons/next-50.png" alt="Volver" width="60%" />
+    </button>
+  </div>
+</section>

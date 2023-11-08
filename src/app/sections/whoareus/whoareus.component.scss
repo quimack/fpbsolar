@@ -1,0 +1,44 @@
+@import "../../../variables";
+
+section {
+  height: 100vh;
+  position: relative;
+  z-index: 3;
+  .principal-content {
+    padding: 8% 0;
+    width: 48%;
+    height: 100%;
+
+    header {
+      font-weight: bold;
+      font-family: "titillium-web-light", sans-serif;
+      font-size: 0.9em;
+    }
+
+    main {
+      .title {
+        font-size: 2.7em;
+        font-family: "titillium-bold-web";
+        line-height: 1;
+      }
+      .txt {
+        color: $grey-light;
+        font-family: "inter", sans-serif;
+      }
+    }
+  }
+
+  .secondary-content {
+    width: 48%;
+    height: 100%;
+    position: relative;
+    img {
+      border-radius: 12px;
+    }
+    .card-wrapper{
+        position: absolute;
+        bottom: 0;
+        left: -3%;
+    }
+  }
+}
