@@ -1,4 +1,7 @@
 <section class="wrapper" id="form">
+  <div class="bckgr"></div>
+  <div class="bckgr2"></div>
+
   <div class="steps-wrapper">
     <div *ngIf="step === 1" class="step" [@fadeInOut]="step === 1">
       <div class="title">¿Dónde quieres instalar tus placas?</div>
@@ -15,8 +18,8 @@
           </div>
           <div class="option">
             <input
-            type="radio"
-            formControlName="installationType"
+              type="radio"
+              formControlName="installationType"
               [value]="2"
               id="industrial"
             />
@@ -223,11 +226,23 @@
       </form>
     </div>
 
-    <button *ngIf="step > 1" class="back-btn" (click)="backStep()">
+    <button
+      *ngIf="step > 1"
+      class="back-btn"
+      (click)="backStep()"
+      [@fadeInOut]="step > 1"
+    >
       <img src="../../../assets/icons/back-50.png" alt="Volver" width="60%" />
     </button>
     <button
       *ngIf="
+        (step === 1 &&
+          installationForm.get('installationType')?.value !== null) ||
+        (step === 2 && installationForm.get('place')?.value !== null) ||
+        (step === 3 &&
+          installationForm.get('monthlyExpenditure')?.value !== null)
+      "
+      [@fadeInOut]="
         (step === 1 &&
           installationForm.get('installationType')?.value !== null) ||
         (step === 2 && installationForm.get('place')?.value !== null) ||

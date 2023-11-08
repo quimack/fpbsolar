@@ -1,6 +1,7 @@
 @import "../../../variables";
 
 .wrapper {
+  // background: url(../../../assets/images/memphis_1.png);
   width: 100vw;
   height: 80vh;
   display: flex;
@@ -8,8 +9,26 @@
   // padding: 3em 0;
   padding-bottom: 5vh;
   margin: 5vh 0;
-  // position: relative;
+  position: relative;
   // top: -10vh;
+  .bckgr{
+    height: 50vh;
+    width: 100vw;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), $light), url(../../../assets/images/memphis_1.png) ;
+    position: absolute;
+    z-index: 1;
+    top: -50vh;
+  }
+
+  .bckgr2{
+    height: 50vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $light), url(../../../assets/images/memphis_1.png) ;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -2px;
+  }
   .steps-wrapper {
     width: 65%;
     height: 100%;
