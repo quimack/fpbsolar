@@ -12,6 +12,7 @@ import { CardComponent } from './components/card/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QuestionsComponent } from './sections/questions/questions.component';
+import { InstallationComponent } from './sections/installation/installation.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { QuestionsComponent } from './sections/questions/questions.component';
     CardComponent,
     WhoareusComponent,
     QuestionsComponent,
+    InstallationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, BrowserAnimationsModule],
   providers: [],

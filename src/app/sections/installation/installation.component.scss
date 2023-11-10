@@ -1,0 +1,31 @@
+@import '../../../variables';
+
+section{
+    width: 100vw;
+    
+    .wrapper{
+        border-radius: 12px;
+        background-color: #fff;
+        width: 94%;
+        padding: 5% 2%;
+        .item{
+            max-width: 50%;
+            padding: 1em;
+            .icon{
+                width: 2em;
+                height: 2em;
+                background: center / contain url(../../../assets/icons/battery-42-green.png) no-repeat;
+                padding-right: 3em;
+            }
+            .title{
+                font-family: 'titillium-web', sans-serif;
+                font-size: 1.1em;
+                font-weight: bolder;
+            }
+            .txt{
+                font-family: 'inter', sans-serif;
+                color: $grey-light;
+            }
+        }
+    }
+}
