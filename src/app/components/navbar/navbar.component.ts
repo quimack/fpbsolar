@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  isMenuOpen = false; // Variable para controlar si el menú está abierto o cerrado
+  isMenuOpen: boolean = false; // Variable para controlar si el menú está abierto o cerrado
 
   constructor() { }
 
