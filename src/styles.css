@@ -1,7 +1,6 @@
-@import "./_variables";
-
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -13,50 +12,70 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "titillium-web", sans-serif;
-  color: $grey-dark;
+  color: #1a3240;
   font-size: 16px;
 }
 
-// FLEX BOX
 .flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .flex-wrap {
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .align-center {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .align-end {
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .flex-center {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .flex-end {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .space-between {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .space-around {
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-// BUTTONS
 .primary-btn {
   background-color: #f6d707;
   text-align: center;
@@ -65,14 +84,15 @@ body {
   border: none;
   border-radius: 7px;
   cursor: pointer;
+  -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
   font-size: 1em;
   font-family: "inter", sans-serif;
+}
 
-  &:hover {
-    background-color: #1a3240;
-    color: #ffff;
-  }
+.primary-btn:hover {
+  background-color: #1a3240;
+  color: #ffff;
 }
 
 button {
@@ -80,20 +100,20 @@ button {
   background-color: transparent;
   outline: none;
   border: none;
-  color: $grey-dark;
-
-  &.disabled {
-    cursor: inherit;
-    opacity: 0.5;
-    background-color: $grey-light;
-    &:hover {
-      background-color: $grey-light;
-      color: inherit;
-    }
-  }
+  color: #1a3240;
 }
 
-// INPUTS
+button.disabled {
+  cursor: inherit;
+  opacity: 0.5;
+  background-color: #868686;
+}
+
+button.disabled:hover {
+  background-color: #868686;
+  color: inherit;
+}
+
 input[type="radio"]:after {
   width: 12px;
   height: 12px;
@@ -102,22 +122,20 @@ input[type="radio"]:after {
   content: "";
   display: inline-block;
   visibility: visible;
-  border: 1px solid $grey-dark;
+  border: 1px solid #1a3240;
 }
 
 input[type="radio"]:checked:after {
   width: 12px;
   height: 12px;
   border-radius: 12px;
-  background-color: $secondary;
+  background-color: #f6d707;
   content: "";
   display: inline-block;
   visibility: visible;
-  border: 1px solid $grey-dark;
+  border: 1px solid #1a3240;
 }
 
-
-// WIDTHS AND HEIGHTS
 .width-100 {
   width: 100%;
 }
@@ -138,7 +156,6 @@ input[type="radio"]:checked:after {
   height: 20%;
 }
 
-// SPACING
 .pt-2 {
   padding-top: 2em;
 }
@@ -146,6 +163,7 @@ input[type="radio"]:checked:after {
 .mt-1 {
   margin-top: 1em;
 }
+
 .mt-2 {
   margin-top: 2em;
 }
@@ -154,28 +172,26 @@ input[type="radio"]:checked:after {
   margin-top: 3em;
 }
 
-// SECTIONS
 .section-wrapper {
   width: 100vw;
   padding: 0 5vw;
 }
 
-// COLORS
 .primary-color {
-  color: $primary;
+  color: #1f64ae;
 }
+
 .secondary-color {
-  color: $secondary;
+  color: #f6d707;
 }
+
 .terciary-color {
-  color: $terciary;
+  color: #6db645;
 }
 
-
-// FONTS
 @font-face {
   font-family: "halyard-display";
-  src: url("./assets/fonts/Halyard\ Display.otf") format("opentype");
+  src: url("./assets/fonts/Halyard Display.otf") format("opentype");
 }
 
 @font-face {
@@ -195,18 +211,25 @@ input[type="radio"]:checked:after {
 
 @font-face {
   font-family: "titillium-bold-web";
-  src: url("./assets/fonts/Titillium\ WebBold.otf") format("opentype");
+  src: url("./assets/fonts/Titillium WebBold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "titillium-web";
-  src: url("./assets/fonts/Titillium\ Web.otf") format("opentype");
+  src: url("./assets/fonts/Titillium Web.otf") format("opentype");
 }
 
 @font-face {
   font-family: "titillium-web-light";
-  src: url("./assets/fonts/Titillium\ WebThin\ V2.otf") format("opentype");
+  src: url("./assets/fonts/Titillium WebThin V2.otf") format("opentype");
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+/*# sourceMappingURL=styles.css.map */

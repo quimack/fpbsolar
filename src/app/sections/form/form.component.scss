@@ -166,6 +166,20 @@
   }
 }
 
-@media screen and (max-width: 850px) {
-  // Aca hay que bajar el font-size
+@media (max-width: 767px) {
+  .wrapper{
+    .steps-wrapper{
+      width: 85%;
+    }
+    .title{
+      font-size: 28px !important;
+      max-width: 100% !important;
+    }
+    .step{
+      margin-top: 3rem;
+    }
+    .steps-wrapper{
+      height: 80%;
+    }
+  }
 }

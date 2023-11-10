@@ -13,6 +13,7 @@
   padding: 0 3vw;
   font-size: 16px;
   font-family: "inter-bold", sans-serif;
+  justify-content: space-between;
 
   .logo {
     background: center / contain
@@ -31,7 +32,7 @@
       margin: 0 20px;
       a {
         text-decoration: none;
-        color: white;
+        color: #FFFF;
 
         &:hover {
           color: $terciary;
@@ -43,5 +44,33 @@
   .btn {
     margin-left: 2vw;
     text-decoration: none;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+    color: #FFF;
+  }
+
+  .menu-open {
+    display: flex;
+    flex-direction: column; // Muestra las opciones en una columna
+  }
+}
+
+// Define una media query para vista móvil (ajusta el ancho según tus necesidades)
+@media (max-width: 767px) {
+  .navbar {
+    .nav-links {
+      display: none; // Oculta los elementos del menú principal en vista móvil
+    }
+    .hamburger {
+      display: block; // Muestra el botón de menú hamburguesa en vista móvil
+    }
+    .btn {
+      display: none; // Oculta el botón "Comenzar" en vista móvil
+    }
   }
 }
