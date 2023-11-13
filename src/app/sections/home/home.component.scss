@@ -96,15 +96,14 @@
     margin: 0 10px;
     font-size: 18px;
     border-width: 2px 2px 2px 2px;
-    border-color: #FFFFFF;
-    border: 2px solid #FFFFFF;
+    border-color: #ffffff;
+    border: 2px solid #ffffff;
     text-decoration: none;
     &:hover {
       background-color: #1a3240;
       color: #ffff;
-      border: 2px solid #1a3240
+      border: 2px solid #1a3240;
     }
-
   }
 }
 
@@ -114,5 +113,34 @@
   }
   100% {
     transform: scale(1.1);
+  }
+}
+
+// Define una media query para vista móvil (ajusta el ancho según tus necesidades)
+@media (max-width: 767px) {
+  .container {
+    .welcome {
+      font-size: 13px;
+    }
+    .title-h1{
+      font-size: 32px;
+    }
+    .sub-title{
+      font-size: 18px;
+    }
+    .buttons{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .button-one{
+      margin: 0;
+      width: 80%;
+    }
+    .button-two{
+      margin: 0;
+      margin-top: 1rem;
+      width: 80%;
+    }
   }
 }

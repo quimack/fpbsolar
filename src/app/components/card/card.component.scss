@@ -18,6 +18,9 @@
     max-width: 42vw;
     width: 100%;
     padding: 0;
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
 
     .img {
       border-radius: 12px 12px 0 0;

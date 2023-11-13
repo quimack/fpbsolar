@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QuestionsComponent } from './sections/questions/questions.component';
 import { InstallationComponent } from './sections/installation/installation.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,9 @@ import { InstallationComponent } from './sections/installation/installation.comp
     WhoareusComponent,
     QuestionsComponent,
     InstallationComponent,
+    FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, BrowserAnimationsModule, CommonModule],
   providers: [],
   bootstrap: [AppComponent],
 })

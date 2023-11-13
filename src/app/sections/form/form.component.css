@@ -1,0 +1,198 @@
+.wrapper {
+  width: 100vw;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5vh;
+  margin: 5em 0;
+  position: relative;
+}
+
+.wrapper .bckgr {
+  height: 50vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(#f1f1f1)), url(../../../assets/images/memphis_1.png);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), #f1f1f1), url(../../../assets/images/memphis_1.png);
+  position: absolute;
+  z-index: 1;
+  top: -50vh;
+}
+
+.wrapper .bckgr2 {
+  height: 50vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#f1f1f1)), url(../../../assets/images/memphis_1.png);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f1f1f1), url(../../../assets/images/memphis_1.png);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -2px;
+}
+
+.wrapper .steps-wrapper {
+  width: 65%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+  position: relative;
+  font-size: 1.3em;
+  padding: 2em;
+  border-radius: 28px;
+  color: #1a3240;
+  background-color: #fff;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
+  -webkit-box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
+  -moz-box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
+}
+
+.wrapper .steps-wrapper:hover {
+  background-color: #fff;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
+  -webkit-box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
+  -moz-box-shadow: 0 0 26px 0 rgba(26, 50, 64, 0.3);
+}
+
+.wrapper .steps-wrapper .back-btn {
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+}
+
+.wrapper .steps-wrapper .next-btn {
+  position: absolute;
+  top: 1.5em;
+  right: 0;
+}
+
+.wrapper .steps-wrapper .step {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .steps-wrapper .step .title {
+  font-family: "titillium-bold-web", sans-serif;
+  font-size: 1.8em;
+  text-align: center;
+  max-width: 68%;
+}
+
+.wrapper .steps-wrapper .step .options {
+  margin-top: 3em;
+  font-family: "titillium-web", sans-serif;
+}
+
+.wrapper .steps-wrapper .step .options .option {
+  font-size: 0.85em;
+  padding: 0.5em;
+  background-color: #fff;
+  border-radius: 8px;
+  font-weight: 400;
+}
+
+.wrapper .steps-wrapper .step .options .option input {
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.wrapper .steps-wrapper .step .options .option label {
+  cursor: pointer;
+}
+
+.wrapper .steps-wrapper .step .options .option span {
+  padding: 0.5em 0 0 0;
+}
+
+.wrapper .steps-wrapper .step .options .option:hover {
+  color: #f6d707;
+}
+
+.wrapper .steps-wrapper .step .form-wrapper {
+  padding-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.wrapper .steps-wrapper .step .form-wrapper .flex-row .input-wrapper {
+  width: 48%;
+}
+
+.wrapper .steps-wrapper .step .form-wrapper .input-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 0.9em;
+}
+
+.wrapper .steps-wrapper .step .form-wrapper .input-wrapper input {
+  font-size: 0.9em;
+  padding: 0.4em 0.4em;
+  outline: none;
+  color: #1a3240;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ecb74d;
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+}
+
+.wrapper .steps-wrapper .step .form-wrapper .primary-btn {
+  font-size: 0.9em;
+  margin-top: 1em;
+}
+
+@media (max-width: 767px) {
+  .wrapper .steps-wrapper {
+    width: 85%;
+  }
+  .wrapper .title {
+    font-size: 28px !important;
+    max-width: 100% !important;
+  }
+  .wrapper .step {
+    margin-top: 3rem;
+  }
+  .wrapper .steps-wrapper {
+    height: 80%;
+  }
+}
+/*# sourceMappingURL=form.component.css.map */

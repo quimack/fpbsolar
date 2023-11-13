@@ -1,0 +1,23 @@
+.footer {
+  background-color: #1A3240;
+  padding: 3em 0em 0em 0em;
+}
+
+.footer .container {
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .container-width {
+  width: 100%;
+}
+
+.footer .title-div {
+  margin: 0% 30% 0% 0%;
+  padding: 1em 1em 1em 1em;
+  margin-right: 30%;
+  margin-left: 0%;
+}
+/*# sourceMappingURL=footer.component.css.map */
