@@ -75,6 +75,29 @@ body {
   }
 }
 
+.secondary-btn {
+  border: 1px solid #f6d707;
+  text-align: center;
+  color: #1a3240;
+  padding: 0.8em 1.5em;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  font-size: 1em;
+  font-family: "inter", sans-serif;
+
+  &.selected {
+    background-color: #f6d707;
+  }
+
+  &:hover {
+    border: none;
+    background-color: #1a3240;
+    color: #ffff;
+  }
+
+}
+
 button {
   cursor: pointer;
   background-color: transparent;
@@ -116,10 +139,12 @@ input[type="radio"]:checked:after {
   border: 1px solid $grey-dark;
 }
 
-
 // WIDTHS AND HEIGHTS
 .width-100 {
   width: 100%;
+}
+.width-75 {
+  width: 75%;
 }
 
 .width-30 {
@@ -170,7 +195,6 @@ input[type="radio"]:checked:after {
 .terciary-color {
   color: $terciary;
 }
-
 
 // FONTS
 @font-face {
