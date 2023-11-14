@@ -1,5 +1,9 @@
 <section class="section-wrapper mt-3" id="whoareus">
-  <div class="more-data flex-row space-between align-end" *ngIf="!shortView" id="moreUs">
+  <div
+    class="more-data flex-row space-between align-end"
+    *ngIf="!shortView"
+    id="moreUs"
+  >
     <div class="card flex-column align-center">
       <div>
         <img
@@ -9,7 +13,8 @@
         />
       </div>
       <p class="txt-content">
-        Atención y estudio personalizado en base a las necesidades de los clientes.
+        Atención y estudio personalizado en base a las necesidades de los
+        clientes.
       </p>
     </div>
     <app-card
@@ -75,13 +80,24 @@
     </div>
   </div>
 
-  <div
-    class="flex-row width-100 space-between logos-wrapper heigh-20"
-    [@fadeInOut]="true"
-  >
-    <div class="logo edp width-22"></div>
-    <div class="logo light width-22"></div>
-    <div class="logo solar360 width-22"></div>
-    <div class="logo galpsolar width-22"></div>
+  <div class="flex-column align-center logos-wrapper">
+    <header class="terciary-color">CONFÍAN EN NOSOTROS</header>
+    <div
+      class="flex-row width-100 space-between heigh-20 pt-2"
+      [@fadeInOut]="true"
+    >
+      <div class="logo-wrapper bckgr-light">
+        <div class="logo edp width-22"></div>
+      </div>
+      <div class="logo-wrapper bckgr-dark">
+        <div class="logo light width-22"></div>
+      </div>
+      <div class="logo-wrapper bckgr-light">
+        <div class="logo galpsolar width-22"></div>
+      </div>
+      <div class="logo-wrapper bckgr-dark">
+        <div class="logo solar360 width-22"></div>
+      </div>
+    </div>
   </div>
 </section>

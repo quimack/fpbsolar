@@ -83,31 +83,57 @@ section {
   }
 
   .logos-wrapper {
-    padding-top: 7em;
-    .logo {
-      height: 8vw;
-      width: 16vw;
+    padding: 4.5em 2em;
+    margin-top: 7em;
+    background-color: $grey-dark;
+    width: 100vw;
+    position: relative;
+    left: -5vw;
 
-      &.edp {
-        background: center / contain
-          url(../../../assets/images/logos/EDP_Renováveis_2022.svg.png)
-          no-repeat;
+    header {
+      font-weight: bold;
+      font-family: "titillium-web-light", sans-serif;
+      font-size: 0.9em;
+      padding-bottom: 1.5em;
+    }
+
+    .logo-wrapper {
+      border-radius: 12px;
+      padding:1em;
+      &.bckgr-light{
+        background-color: #fff;
+        
       }
 
-      &.light {
-        background: center / contain
-          url(../../../assets/images/logos/logo-light.png) no-repeat;
+      &.bckgr-dark{
+        border: 1px solid #fff;
+        background-color: $grey-dark;
       }
+      .logo {
+        height: 8vw;
+        width: 16vw;
 
-      &.solar360 {
-        background: center / contain
-          url(../../../assets/images/logos/Logo-Solar360.png) no-repeat;
-      }
+        &.edp {
+          background: center / contain
+            url(../../../assets/images/logos/EDP_Renováveis_2022.svg.png)
+            no-repeat;
+        }
 
-      &.galpsolar {
-        background: center / contain
-          url(../../../assets/images/logos/Logo_GalpSolar_17012022.png)
-          no-repeat;
+        &.light {
+          background: center / contain
+            url(../../../assets/images/logos/logo-light.png) no-repeat;
+        }
+
+        &.solar360 {
+          background: center / contain
+            url(../../../assets/images/logos/Logo-Solar360.png) no-repeat;
+        }
+
+        &.galpsolar {
+          background: center / contain
+            url(../../../assets/images/logos/Logo_GalpSolar_17012022.png)
+            no-repeat;
+        }
       }
     }
   }
