@@ -1,0 +1,45 @@
+section {
+  padding-top: 5em;
+  padding-bottom: 5em;
+  font-family: "titillium-web", sans-serif;
+
+  header {
+    font-weight: bold;
+    font-family: "titillium-web-light", sans-serif;
+    font-size: 0.9em;
+    padding-bottom: 4em;
+  }
+  .title {
+    font-size: 2.7em;
+    font-family: "titillium-bold-web";
+    line-height: 1;
+    max-width: 60vw;
+    text-align: center;
+    padding-bottom: 1em;
+  }
+
+  .map {
+    min-width: 42%;
+  }
+  .places-wrapper {
+    padding: 2.5em 0 2.5em 0.7em;
+
+    .places {
+      padding: 0 1em;
+      cursor: pointer;
+
+      .icon {
+        width: 0.9em;
+        height: 0.9em;
+        background: center / contain
+          url(../../../assets/icons/location-50-yellow.png) no-repeat;
+        margin-right: 0.3em;
+      }
+
+      span {
+        font-size: 1.1em;
+        margin: 0;
+      }
+    }
+  }
+}

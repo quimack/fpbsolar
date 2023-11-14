@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QuestionsComponent } from './sections/questions/questions.component';
 import { InstallationComponent } from './sections/installation/installation.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProjectsComponent } from './sections/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FooterComponent } from './components/footer/footer.component';
     QuestionsComponent,
     InstallationComponent,
     FooterComponent,
+    ProjectsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, BrowserAnimationsModule, CommonModule],
   providers: [],
