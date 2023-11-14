@@ -1,8 +1,8 @@
-<section class="wrapper" id="form">
+<section class="wrapper width-100 flex-column align-center" id="form">
   <div class="bckgr"></div>
   <div class="bckgr2"></div>
 
-  <div class="steps-wrapper">
+  <main class="steps-wrapper">
     <div *ngIf="step === 1" class="step width-75" [@fadeInOut]="step === 1">
       <div class="title">¿Dónde quieres instalar tus placas?</div>
       <div class="options width-100">
@@ -360,5 +360,5 @@
     >
       <img src="../../../assets/icons/next-50.png" alt="Volver" width="60%" />
     </button>
-  </div>
+  </main>
 </section>

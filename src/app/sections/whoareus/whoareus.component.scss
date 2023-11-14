@@ -1,16 +1,45 @@
 @import "../../../variables";
 
 section {
-  height: 120vh;
+  // height: 120vh;
   position: relative;
   z-index: 3;
+  padding: 0 5vw;
+  padding-top: 6em;
 
-  &.section-wrapper {
-    // padding: 0 5vw;
-    margin-top: 6em;
+  .content {
+    &.long-view {
+      padding-top: 12em;
+    }
   }
+
+  .more-data {
+    position: absolute;
+    top: -24%;
+    left: 2vw;
+    z-index: 1;
+    width: 97vw;
+    padding-top: 4em;
+    .card {
+      min-width: 380px;
+      max-width: 30%;
+      background-color: $primary;
+      border-radius: 12px;
+      color: #fff;
+      text-align: center;
+      font-size: 1.6em;
+      font-family: "titillium-web", sans-serif;
+      font-weight: bold;
+      padding: 1.5em 1em;
+
+      p {
+        max-width: 85%;
+      }
+    }
+  }
+
   .principal-content {
-    padding: 8% 0;
+    padding: 5% 0;
     width: 42%;
     height: 80%;
 
@@ -18,6 +47,7 @@ section {
       font-weight: bold;
       font-family: "titillium-web-light", sans-serif;
       font-size: 0.9em;
+      padding-bottom: 1.5em;
     }
 
     main {
@@ -27,9 +57,14 @@ section {
         line-height: 1;
       }
       .txt {
+        padding-top: 0.8em;
         color: $grey-light;
         font-family: "inter", sans-serif;
       }
+    }
+
+    footer {
+      padding-top: 2em;
     }
   }
 
@@ -43,32 +78,37 @@ section {
     .card-wrapper {
       position: absolute;
       top: 50%;
-      left: -4%;
+      left: -5%;
     }
   }
 
-  .logo {
-    height: 8vw;
-    width: 16vw;
+  .logos-wrapper {
+    padding-top: 7em;
+    .logo {
+      height: 8vw;
+      width: 16vw;
 
-    &.edp {
-      background: center / contain
-        url(../../../assets/images/logos/EDP_Renováveis_2022.svg.png) no-repeat;
-    }
+      &.edp {
+        background: center / contain
+          url(../../../assets/images/logos/EDP_Renováveis_2022.svg.png)
+          no-repeat;
+      }
 
-    &.light {
-      background: center / contain
-        url(../../../assets/images/logos/logo-light.png) no-repeat;
-    }
+      &.light {
+        background: center / contain
+          url(../../../assets/images/logos/logo-light.png) no-repeat;
+      }
 
-    &.solar360 {
-      background: center / contain
-        url(../../../assets/images/logos/Logo-Solar360.png) no-repeat;
-    }
+      &.solar360 {
+        background: center / contain
+          url(../../../assets/images/logos/Logo-Solar360.png) no-repeat;
+      }
 
-    &.galpsolar {
-      background: center / contain
-        url(../../../assets/images/logos/Logo_GalpSolar_17012022.png) no-repeat;
+      &.galpsolar {
+        background: center / contain
+          url(../../../assets/images/logos/Logo_GalpSolar_17012022.png)
+          no-repeat;
+      }
     }
   }
 }

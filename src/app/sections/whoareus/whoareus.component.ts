@@ -8,10 +8,14 @@ import { fadeInOutAnimation } from 'src/assets/animations';
   animations: [fadeInOutAnimation],
 })
 export class WhoareusComponent implements OnInit {
+  shortView: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  showMore(){
+    this.shortView = false;
+  }
 }
