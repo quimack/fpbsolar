@@ -13,10 +13,6 @@ export class FormComponent implements OnInit {
   step: number = 1;
   lastStep: number = 1;
 
-  installationType: InstallationType;
-  place: Place = Place.CASA;
-  monthlyExpenditure: MonthlyExpenditure = MonthlyExpenditure.NO_LO_SE;
-
   installationForm = new FormGroup({
     installationType: new FormControl(null, Validators.required),
     place: new FormControl(null),
@@ -58,25 +54,12 @@ export class FormComponent implements OnInit {
 
   setInstallationType(typeId: InstallationType){
     console.log("aslj", typeId)
-    // this.installationType = typeId;
     this.installationForm.get("installationType")?.setValue(typeId)
-    // this.installationForm.controls['installationType'].patchValue(typeId)
-    // console.log(this.installationForm.value)
-    // setTimeout(()=>{
-    //   this.lastStep = Number(this.step);
-    //   if(typeId === InstallationType.HOGAR){
-    //     this.step = 2;
-    //   }else{
-    //     this.step = 4;
-    //   }
-    // }, 1000)
   }
 
   setPlace(placeId: Place){
     this.installationForm.get("place")?.setValue(placeId)
 
-    // this.step2 = false;
-    // this.step3 = true;
     this.lastStep = Number(this.step);
 
     this.step = 3;
@@ -85,8 +68,6 @@ export class FormComponent implements OnInit {
   setMonthlyExpenditure(value: MonthlyExpenditure){
     this.installationForm.get("monthlyExpenditure")?.setValue(value)
 
-    // this.step3 = false;
-    // this.step4 = true;
     this.lastStep = Number(this.step);
     this.step = 4;
   }

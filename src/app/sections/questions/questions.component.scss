@@ -1,13 +1,9 @@
 @import "../../../variables";
 
 section {
-  // height: 100vh;
   position: relative;
   z-index: 3;
   background-color: $primary;
-  // mix-blend-mode: multiply;
-  padding: 10vh 4vw;
-
   .bckgr-img {
     position: absolute;
     background: top / cover
@@ -16,8 +12,12 @@ section {
     height: 100%;
     opacity: 0.05;
     z-index: 1;
-    // mix-blend-mode: multiply;
   }
+
+  header {
+    font-size: 1.1em;
+  }
+
   main {
     text-align: center;
     color: #fff;
@@ -48,14 +48,12 @@ section {
       max-width: 93%;
       font-size: 14px;
     }
-    .responsive{
+    .responsive {
       display: flex;
       flex-direction: column;
-
     }
-    .card-wrapper.l{
-      max-width: 100%!important;
+    .card-wrapper.l {
+      max-width: 100% !important;
     }
   }
-
 }

@@ -1,25 +1,18 @@
 @import "../../../variables";
 
 section {
-  // height: 120vh;
   position: relative;
   z-index: 3;
   padding: 0 5vw;
   padding-top: 6em;
 
-  .content {
-    &.long-view {
-      padding-top: 12em;
-    }
-  }
-
   .more-data {
-    position: absolute;
-    top: -24%;
-    left: 2vw;
+    position: relative;
+    bottom: -5em;
     z-index: 1;
-    width: 97vw;
-    padding-top: 4em;
+    min-width: 102%;
+    margin-left: -1%;
+    padding-top: 1.5em;
     .card {
       min-width: 380px;
       max-width: 30%;
@@ -46,7 +39,7 @@ section {
     header {
       font-weight: bold;
       font-family: "titillium-web-light", sans-serif;
-      font-size: 0.9em;
+      font-size: 1.1em;
       padding-bottom: 1.5em;
     }
 
@@ -84,7 +77,7 @@ section {
 
   .logos-wrapper {
     padding: 4.5em 2em;
-    margin-top: 7em;
+    margin-top: 8em;
     background-color: $grey-dark;
     width: 100vw;
     position: relative;
@@ -98,7 +91,7 @@ section {
     header {
       font-weight: bold;
       font-family: "titillium-web-light", sans-serif;
-      font-size: 0.9em;
+      font-size: 1.1em;
       padding-bottom: 1.5em;
     }
 

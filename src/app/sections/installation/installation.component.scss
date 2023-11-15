@@ -2,29 +2,27 @@
 
 section {
   width: 100vw;
-  margin-top: 20vh;
   z-index: 3;
   position: relative;
   header {
     font-weight: bold;
     font-family: "titillium-web-light", sans-serif;
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
 
   main {
-    padding: 4% 2%;
-
     .title {
       font-size: 2.7em;
       font-family: "titillium-bold-web";
       line-height: 1;
+      padding: 1em 0;
     }
 
     .wrapper{
       background-color: #fff;
       border-radius: 12px;
       padding: 1em;
-      margin-top: 2em;
+      margin-top: 1em;
     }
     .img-wrapper {
       border-radius: 12px;
@@ -35,7 +33,7 @@ section {
 
     .content-wrapper {
       .item {
-        max-width: 425px;
+        max-width: 399px;
         padding: 1em;
         .icon {
           width: 2em;
@@ -78,5 +76,23 @@ section {
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 1703px) and (max-width: 1968px) {
+  div.item{
+    max-width: 500px !important;
+  }
+}
+
+@media screen and (min-width: 1969px) and (max-width: 2035px) {
+  div.item{
+    max-width: 580px !important;
+  }
+}
+
+@media screen and (min-width: 2036px) {
+  div.item{
+    max-width: 600px !important;
   }
 }

@@ -18,7 +18,7 @@ section .principal-content {
 section .principal-content header {
   font-weight: bold;
   font-family: "titillium-web-light", sans-serif;
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 section .principal-content main .title {

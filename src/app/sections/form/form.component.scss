@@ -1,16 +1,11 @@
 @import "../../../variables";
 
 .wrapper {
-  // background: url(../../../assets/images/memphis_1.png);
   width: 100vw;
   min-height: 70vh;
-  // display: flex;
-  // justify-content: center;
-  // padding: 3em 0;
   padding-bottom: 7em;
   padding-top: 5em;
   position: relative;
-  // top: -10vh;
   .bckgr {
     height: 50vh;
     width: 100vw;
@@ -37,7 +32,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    // justify-content: space-around;
     align-items: center;
     z-index: 3;
     position: relative;
@@ -84,26 +78,14 @@
 
       .options {
         margin-top: 3em;
-        // width: 100%;
-        // max-width: 650px;
-        // display: flex;
-        // justify-content: space-around;
         font-family: "titillium-web", sans-serif;
 
         .option {
           font-size: 0.85em;
-          // text-align: end;
-          // cursor: pointer;
           padding: 0.5em;
-          // border: 2px solid #ecb74d;
           background-color: #fff;
           border-radius: 8px;
           font-weight: 400;
-          // max-width: 160px;
-          // display: flex;
-          // flex-direction: column;
-          // justify-content: center;
-          // align-items: center;
 
           input {
             margin-right: 1em;
@@ -119,10 +101,6 @@
 
           &:hover {
             color: $secondary;
-            //   transform: scale(1.06);
-            //   transition: 0.6s;
-            //   // background-color: #fff;
-            //   // background-color: #ecb74d;
           }
         }
       }

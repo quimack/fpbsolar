@@ -1,7 +1,7 @@
 .footer {
   background-color: #1A3240;
-  padding: 3em 0em 3em 0em;
   display: flex;
+  font-family: 'titillium-web', sans-serif;
 
   .footer-container {
     display: flex;
@@ -22,7 +22,7 @@
       width: 64%;
 
       img {
-        margin-right: 10px; // Ajusta el margen entre los iconos según sea necesario
+        margin-right: 10px;
         width: 2rem;
       }
     }

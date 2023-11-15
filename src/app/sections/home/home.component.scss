@@ -36,14 +36,14 @@
     top: 31vh;
     font-size: 2rem;
     color: #ffffff;
-    max-width: 700px;
+    max-width: 900px;
     z-index: 3;
   }
 
   .welcome {
     text-align: center;
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-family: "titillium-web-light", sans-serif;
   }
   .title-h1 {
@@ -116,7 +116,6 @@
   }
 }
 
-// Define una media query para vista móvil (ajusta el ancho según tus necesidades)
 @media (max-width: 767px) {
   .container {
     .welcome {

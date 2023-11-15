@@ -1,4 +1,4 @@
-@import '../../../variables';
+@import "../../../variables";
 
 .navbar {
   position: absolute;
@@ -32,7 +32,7 @@
       margin: 0 20px;
       a {
         text-decoration: none;
-        color: #FFFF;
+        color: #ffff;
 
         &:hover {
           color: $terciary;
@@ -51,8 +51,8 @@
     font-size: 24px;
     cursor: pointer;
     margin-right: 20px;
-    color: #FFF;
-    &.menu-open{
+    color: #fff;
+    &.menu-open {
       display: none;
     }
   }
@@ -61,23 +61,22 @@
     display: flex;
     flex-direction: column;
 
-    &.nav-links{
+    &.nav-links {
       display: block;
     }
   }
 }
 
-// Define una media query para vista móvil (ajusta el ancho según tus necesidades)
 @media (max-width: 767px) {
   .navbar {
     .nav-links {
-      display: none; // Oculta los elementos del menú principal en vista móvil
+      display: none;
     }
     .hamburger {
-      display: block; // Muestra el botón de menú hamburguesa en vista móvil
+      display: block;
     }
     .btn {
-      display: none; // Oculta el botón "Comenzar" en vista móvil
+      display: none;
     }
   }
 }
