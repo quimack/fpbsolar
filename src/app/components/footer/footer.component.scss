@@ -1,19 +1,99 @@
-.footer{
+.footer {
   background-color: #1A3240;
-  padding: 3em 0em 0em 0em;
-  .container{
-    max-width: 1280px;
+  padding: 3em 0em 3em 0em;
+  display: flex;
+
+  .footer-container {
     display: flex;
+    width: 30%;
+    flex-direction: column;
+
+    .logo-container {
+      width: 80%;
+    }
+    .img-width{
+      width: 100%;
+    }
+
+    .social-icons-container {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      width: 64%;
+
+      img {
+        margin-right: 10px; // Ajusta el margen entre los iconos según sea necesario
+        width: 2rem;
+      }
+    }
+  }
+  .width-contact{
+    display: flex;
+    width: 70%;
 
   }
-  .container-width{
-    width: 100%;
+  .title-class{
+    color: #6EB846;
   }
-  .title-div{
-    margin: 0% 30% 0% 0%;
-    padding: 1em 1em 1em 1em;
-    margin-right: 30%;
-    margin-left: 0%;
+  .text-class{
+    color: #FFF;
+    margin: 0;
+    cursor: pointer;
 
+    &:hover{
+      color: #6EB846;
+      transition: color 0.3s;
+    }
+  }
+  .direction-class{
+    width: 50%;
+  }
+  .phone-class{
+    width: 50%;
+  }
+  .email-class{
+    width: 30%;
+  }
+  .icon-width{
+    width: 30px;
+  }
+  .contact-flex{
+    display: flex;
+    align-items: self-end;
+    margin: 0 0 12px 0px;
+  }
+  .margin-left{
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  .margin-bottom{
+    margin-bottom: 12px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .footer{
+    flex-direction: column;
+    .footer-container{
+      width: 100%;
+      margin-bottom: 3rem;
+      align-items: center;
+    }
+    .width-contact{
+      flex-direction: column;
+    }
+    .direction-class{
+      width: 100%;
+      margin-bottom: 3rem;
+      margin-left: 1rem;
+    }
+    .phone-class{
+      margin-left: 1rem;
+      width: 100%;
+    }
+    .text-class{
+      font-size: 1rem;
+    }
   }
 }

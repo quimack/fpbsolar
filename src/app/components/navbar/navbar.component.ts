@@ -16,6 +16,5 @@ export class NavbarComponent implements OnInit {
   // Función para alternar la apertura/cierre del menú en vista móvil
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    console.log("Toggle menu clicked");
   }
 }

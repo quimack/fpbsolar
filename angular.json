@@ -109,5 +109,8 @@
       }
     }
   },
-  "defaultProject": "fpbsolar"
+  "defaultProject": "fpbsolar",
+  "cli": {
+    "analytics": "1ec279e4-f4e0-4df4-987c-5af880d38916"
+  }
 }
