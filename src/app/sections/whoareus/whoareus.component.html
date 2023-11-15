@@ -1,5 +1,46 @@
-<section class="section-wrapper mt-3 " id="whoareus">
-  <div class="flex-row space-between height-80 responsive">
+<section class="section-wrapper mt-3" id="whoareus">
+  <div
+    class="more-data flex-row space-between align-end"
+    *ngIf="!shortView"
+    id="moreUs"
+  >
+    <div class="card flex-column align-center">
+      <div>
+        <img
+          class="icon"
+          src="../../assets/icons/fingerprint-50-white.png"
+          alt=""
+        />
+      </div>
+      <p class="txt-content">
+        Atención y estudio personalizado en base a las necesidades de los
+        clientes.
+      </p>
+    </div>
+    <app-card
+      size="s"
+      iconSrc="../../assets/icons/solar-panel-50-green.png"
+      title="Ejecución e instalación de sistema fotovoltaico."
+      txt=""
+    ></app-card>
+    <app-card
+      size="s"
+      iconSrc="../../assets/icons/invoice-50-green.png"
+      title="Gestión de subvenciones y financiación de obra."
+      txt=""
+    ></app-card>
+    <app-card
+      size="s"
+      iconSrc="../../assets/icons/web-analytics-50-green.png"
+      title="Monitorización Web/App"
+      txt=""
+    ></app-card>
+  </div>
+
+  <div
+    [class.long-view]="!shortView"
+    class="content flex-row space-between height-80 responsive"
+  >
     <div class="principal-content flex-column space-between">
       <header class="terciary-color">QUIÉNES SOMOS</header>
       <main>
@@ -14,7 +55,9 @@
         </p>
       </main>
       <footer>
-        <button class="primary-btn">Descubrir más</button>
+        <a href="#moreUs" (click)="showMore()" class="primary-btn"
+          >Descubrir más</a
+        >
       </footer>
     </div>
 
@@ -37,10 +80,24 @@
     </div>
   </div>
 
-  <div class="flex-row width-100 space-between pt-2 heigh-20" [@fadeInOut]="true">
-    <div class="logo edp width-22"></div>
-    <div class="logo light width-22"></div>
-    <div class="logo solar360 width-22"></div>
-    <div class="logo galpsolar width-22"></div>
+  <div class="flex-column align-center logos-wrapper">
+    <header class="terciary-color">CONFÍAN EN NOSOTROS</header>
+    <div
+      class="flex-row width-100 space-between heigh-20 pt-2"
+      [@fadeInOut]="true"
+    >
+      <div class="logo-wrapper bckgr-light">
+        <div class="logo edp width-22"></div>
+      </div>
+      <div class="logo-wrapper bckgr-dark">
+        <div class="logo light width-22"></div>
+      </div>
+      <div class="logo-wrapper bckgr-light">
+        <div class="logo galpsolar width-22"></div>
+      </div>
+      <div class="logo-wrapper bckgr-dark">
+        <div class="logo solar360 width-22"></div>
+      </div>
+    </div>
   </div>
 </section>

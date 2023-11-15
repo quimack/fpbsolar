@@ -1,0 +1,82 @@
+@import "../../../variables";
+
+section {
+  width: 100vw;
+  margin-top: 20vh;
+  z-index: 3;
+  position: relative;
+  header {
+    font-weight: bold;
+    font-family: "titillium-web-light", sans-serif;
+    font-size: 0.9em;
+  }
+
+  main {
+    padding: 4% 2%;
+
+    .title {
+      font-size: 2.7em;
+      font-family: "titillium-bold-web";
+      line-height: 1;
+    }
+
+    .wrapper{
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 1em;
+      margin-top: 2em;
+    }
+    .img-wrapper {
+      border-radius: 12px;
+      img {
+        border-radius: 12px;
+      }
+    }
+
+    .content-wrapper {
+      .item {
+        max-width: 425px;
+        padding: 1em;
+        .icon {
+          width: 2em;
+          height: 2em;
+          padding-right: 3.5em;
+          &.battery {
+            background: center / contain
+              url(../../../assets/icons/battery-42-green.png) no-repeat;
+          }
+          &.solar-panel {
+            background: center / contain
+              url(../../../assets/icons/solar-panel-42-green.png) no-repeat;
+          }
+          &.monitoring {
+            background: center / contain
+              url(../../../assets/icons/electrical-threshold-42-green.png)
+              no-repeat;
+          }
+          &.energy-box {
+            background: center / contain
+              url(../../../assets/icons/energy-42-green.png) no-repeat;
+          }
+          &.metal {
+            background: center / contain
+              url(../../../assets/icons/sheet-metal-42-green.png) no-repeat;
+          }
+          &.protection {
+            background: center / contain
+              url(../../../assets/icons/protection-42-green.png) no-repeat;
+          }
+        }
+        .title {
+          font-family: "titillium-web", sans-serif;
+          font-size: 1.1em;
+          font-weight: bolder;
+        }
+        .txt {
+          font-family: "inter", sans-serif;
+          color: $grey-light;
+        }
+      }
+    }
+  }
+}

@@ -60,7 +60,7 @@ body {
   justify-content: space-around;
 }
 
-// BUTTONS
+// BUTTONS AND ANCHORS
 .primary-btn {
   background-color: #f6d707;
   text-align: center;
@@ -77,6 +77,33 @@ body {
     background-color: #1a3240;
     color: #ffff;
   }
+}
+
+.secondary-btn {
+  border: 1px solid #f6d707;
+  text-align: center;
+  color: #1a3240;
+  padding: 0.8em 1.5em;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  font-size: 1em;
+  font-family: "inter", sans-serif;
+
+  &.selected {
+    background-color: #f6d707;
+  }
+
+  &:hover {
+    border: none;
+    background-color: #1a3240;
+    color: #ffff;
+  }
+
+}
+
+a{
+  text-decoration: none;
 }
 
 button {
@@ -120,12 +147,25 @@ input[type="radio"]:checked:after {
   border: 1px solid $grey-dark;
 }
 
-
 // WIDTHS AND HEIGHTS
 .width-100 {
   width: 100%;
 }
-
+.width-75 {
+  width: 75%;
+}
+.width-62 {
+  width: 62%;
+}
+.width-50 {
+  width: 50%;
+}
+.width-48 {
+  width: 48%;
+}
+.width-45 {
+  width: 45%;
+}
 .width-30 {
   width: 30%;
 }
@@ -146,7 +186,15 @@ input[type="radio"]:checked:after {
 .pt-2 {
   padding-top: 2em;
 }
-
+.pt-4{
+  padding-top: 4em;
+}
+.pt-6{
+  padding-top: 6em;
+}
+.py-5{
+  padding: 5em 0;
+}
 .mt-1 {
   margin-top: 1em;
 }
@@ -174,7 +222,6 @@ input[type="radio"]:checked:after {
 .terciary-color {
   color: $terciary;
 }
-
 
 // FONTS
 @font-face {

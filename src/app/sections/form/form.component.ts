@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InstallationType, Place, MonthlyExpenditure } from '../../models/formData';
-import { FormControl, FormGroup, RequiredValidator, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { fadeInOutAnimation } from 'src/assets/animations';
 
 @Component({
@@ -56,38 +56,40 @@ export class FormComponent implements OnInit {
   }
 
 
-  // setInstallationType(typeId: InstallationType){
-  //   console.log("aslj")
-  //   this.installationType = typeId;
+  setInstallationType(typeId: InstallationType){
+    console.log("aslj", typeId)
+    // this.installationType = typeId;
+    this.installationForm.get("installationType")?.setValue(typeId)
+    // this.installationForm.controls['installationType'].patchValue(typeId)
+    // console.log(this.installationForm.value)
+    // setTimeout(()=>{
+    //   this.lastStep = Number(this.step);
+    //   if(typeId === InstallationType.HOGAR){
+    //     this.step = 2;
+    //   }else{
+    //     this.step = 4;
+    //   }
+    // }, 1000)
+  }
 
-  //   setTimeout(()=>{
-  //     this.lastStep = Number(this.step);
-  //     if(typeId === InstallationType.HOGAR){
-  //       this.step = 2;
-  //     }else{
-  //       this.step = 4;
-  //     }
-  //   }, 1000)
-  // }
+  setPlace(placeId: Place){
+    this.installationForm.get("place")?.setValue(placeId)
 
-  // setPlace(placeId: Place){
-  //   this.place = placeId;
+    // this.step2 = false;
+    // this.step3 = true;
+    this.lastStep = Number(this.step);
 
-  //   // this.step2 = false;
-  //   // this.step3 = true;
-  //   this.lastStep = Number(this.step);
+    this.step = 3;
+  }
 
-  //   this.step = 3;
-  // }
+  setMonthlyExpenditure(value: MonthlyExpenditure){
+    this.installationForm.get("monthlyExpenditure")?.setValue(value)
 
-  // setMonthlyExpenditure(value: MonthlyExpenditure){
-  //   this.monthlyExpenditure = value;
-
-  //   // this.step3 = false;
-  //   // this.step4 = true;
-  //   this.lastStep = Number(this.step);
-  //   this.step = 4;
-  // }
+    // this.step3 = false;
+    // this.step4 = true;
+    this.lastStep = Number(this.step);
+    this.step = 4;
+  }
 
   onSubmit(){
     console.log(this.personalDataForm)

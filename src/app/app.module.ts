@@ -13,7 +13,9 @@ import { CardComponent } from './components/card/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QuestionsComponent } from './sections/questions/questions.component';
+import { InstallationComponent } from './sections/installation/installation.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProjectsComponent } from './sections/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { FooterComponent } from './components/footer/footer.component';
     CardComponent,
     WhoareusComponent,
     QuestionsComponent,
+    InstallationComponent,
     FooterComponent,
+    ProjectsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, BrowserAnimationsModule, CommonModule],
   providers: [],
