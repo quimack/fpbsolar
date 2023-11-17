@@ -10,10 +10,10 @@
   z-index: 2;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 3vw;
   font-size: 16px;
   font-family: "inter-bold", sans-serif;
-  justify-content: space-between;
 
   .logo {
     background: center / contain
@@ -47,13 +47,27 @@
   }
 
   .hamburger {
-    display: none;
-    font-size: 24px;
     cursor: pointer;
-    margin-right: 20px;
-    color: #fff;
-    &.menu-open {
-      display: none;
+    margin-top: 8px;
+
+    .icon{
+      margin-right: 1.5vw;
+      width: 30px;
+      height: 30px;
+      background: center / contain url(../../../assets/icons/hamburger-50-white.png) no-repeat;
+    }
+  }
+
+  .close{
+    cursor: pointer;
+    margin-top: 8px;
+
+
+    .icon{
+      width: 30px;
+      height: 30px;
+      background: center / contain url(../../../assets/icons/close-50-white.png) no-repeat;
+      margin-right: 1.5vw;
     }
   }
 

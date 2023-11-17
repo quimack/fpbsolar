@@ -1,6 +1,11 @@
   <div class="navbar">
     <div class="logo"></div>
-    <button class="hamburger" [ngClass]="{'menu-open': isMenuOpen}" (click)="toggleMenu()">&#9776;</button>
+    <button class="hamburger" *ngIf="!isMenuOpen" (click)="toggleMenu()">
+      <div class="icon"></div>
+    </button>
+    <button class="close" *ngIf="isMenuOpen" (click)="toggleMenu()">
+      <div class="icon"></div>
+    </button>
     <ul class="nav-links" [ngClass]="{'menu-open': isMenuOpen}">
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#instalaciones">Obras Ejecutadas</a></li>
