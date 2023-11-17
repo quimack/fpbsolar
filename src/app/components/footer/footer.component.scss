@@ -53,6 +53,10 @@
       color: #6EB846;
       transition: color 0.3s;
     }
+
+    &.phone{
+      cursor: default;
+    }
   }
   .direction-class{
     width: 50%;
