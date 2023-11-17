@@ -37,6 +37,13 @@ section {
   .card-wrapper {
     padding-top: 4em;
   }
+  @media (max-width: 767px) {
+    .title {
+      text-align: start;
+      margin-bottom: 1rem;
+    }
+
+  }
 }
 
 @media (max-width: 767px) {
@@ -48,12 +55,16 @@ section {
       max-width: 93%;
       font-size: 14px;
     }
-    .responsive {
+    .responsive  {
       display: flex;
       flex-direction: column;
     }
     .card-wrapper.l {
       max-width: 100% !important;
+    }
+    .txt-content{
+      max-width: 100%;
+      text-align: start !important
     }
   }
 }
