@@ -41,12 +41,8 @@
     }
   }
 
-  .btn {
-    margin-left: 2vw;
-    text-decoration: none;
-  }
-
   .hamburger {
+    display: none;
     cursor: pointer;
     margin-top: 8px;
 
@@ -61,7 +57,6 @@
   .close{
     cursor: pointer;
     margin-top: 8px;
-
 
     .icon{
       width: 30px;
@@ -105,15 +100,9 @@
 
     .hamburger {
       display: block;
-    }
 
-    .btn {
-      display: none;
-    }
-
-    &.menu-open {
-      .nav-links {
-        display: flex;
+      &.menu-open{
+        display: none;
       }
     }
   }

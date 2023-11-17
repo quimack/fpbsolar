@@ -1,6 +1,6 @@
   <div class="navbar">
     <div class="logo"></div>
-    <button class="hamburger" *ngIf="!isMenuOpen" (click)="toggleMenu()">
+    <button class="hamburger" [class.menu-open]="isMenuOpen" (click)="toggleMenu()">
       <div class="icon"></div>
     </button>
     <button class="close" *ngIf="isMenuOpen" (click)="toggleMenu()">
