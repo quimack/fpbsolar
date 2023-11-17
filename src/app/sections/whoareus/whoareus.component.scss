@@ -72,6 +72,7 @@ section {
       position: absolute;
       top: 50%;
       left: -5%;
+
     }
   }
 
@@ -98,8 +99,10 @@ section {
     .logo-wrapper {
       border-radius: 12px;
       padding:1em;
+      margin-bottom: 3rem;
       &.bckgr-light{
         background-color: #fff;
+
 
       }
 
@@ -112,7 +115,8 @@ section {
         width: 16vw;
 
         @media (max-width: 767px) {
-          width: 14vw;
+          width: 85vw;
+          height: 50vh;
 
         }
 
@@ -153,6 +157,7 @@ section {
     }
     .secondary-content {
       width: 100%;
+
     }
     .primary-btn {
       font-size: 16px;
@@ -162,5 +167,17 @@ section {
       height: 50vw;
       width: 20vw;
     }
+    .margin{
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+    .flex-row{
+      flex-direction: column;
+    }
+    .card{
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
   }
 }

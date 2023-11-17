@@ -14,6 +14,7 @@
   max-width: 270px;
   height: 272px;
 
+
   &.l {
     height: 75vh;
     max-width: 42vw;
@@ -30,7 +31,7 @@
       max-width: 100%;
       background-size: 110%;
       background-repeat: no-repeat;
-      background-position: center; 
+      background-position: center;
       transition: background-position 0.3s;
       &:hover {
         background-position: top;
@@ -89,5 +90,11 @@
         font-family: "titillium-bold-web", sans-serif;
       }
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .card-wrapper{
+    margin-bottom: 3rem;
   }
 }

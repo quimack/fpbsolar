@@ -3,7 +3,7 @@
     [class.long-view]="!shortView"
     class="content flex-row space-between height-80 responsive"
   >
-    <div class="principal-content flex-column space-between" data-aos="fade-right">
+    <div class="principal-content flex-column space-between" data-aos="fade-right" data-aos-duration="1500">
       <header class="terciary-color">QUIÉNES SOMOS</header>
       <main>
         <div class="title">
@@ -24,13 +24,15 @@
     </div>
 
     <div class="secondary-content">
-      <div class="img flex-row flex-end">
+      <div class="img flex-row flex-end ">
         <img
+          data-aos="fade-left" data-aos-duration="1500"
           src="../../../assets/images/installations/Vilarmaior.jpeg"
           alt=""
           width="95%"
+          class="margin"
         />
-        <div class="card-wrapper">
+        <div class="card-wrapper" data-aos="zoom-in" data-aos-duration="1500">
           <app-card
             iconSrc="../../../assets/icons/approval-50.png"
             title="CONFIANZA"
@@ -80,22 +82,22 @@
     ></app-card>
   </div>
 
-  <div class="flex-column align-center logos-wrapper">
+  <div class="flex-column align-center logos-wrapper" >
     <header class="terciary-color">CONFÍAN EN NOSOTROS</header>
     <div
       class="flex-row width-100 space-between heigh-20 pt-2"
       [@fadeInOut]="true"
     >
-      <div class="logo-wrapper bckgr-light">
+      <div class="logo-wrapper bckgr-light" data-aos="zoom-in" data-aos-duration="1000">
         <div class="logo edp width-22"></div>
       </div>
-      <div class="logo-wrapper bckgr-dark">
+      <div class="logo-wrapper bckgr-dark" data-aos="zoom-in" data-aos-duration="1000">
         <div class="logo light width-22"></div>
       </div>
-      <div class="logo-wrapper bckgr-light">
+      <div class="logo-wrapper bckgr-light" data-aos="zoom-in" data-aos-duration="1000">
         <div class="logo galpsolar width-22"></div>
       </div>
-      <div class="logo-wrapper bckgr-dark">
+      <div class="logo-wrapper bckgr-dark" data-aos="zoom-in" data-aos-duration="1000">
         <div class="logo solar360 width-22"></div>
       </div>
     </div>
