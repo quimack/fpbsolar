@@ -6,15 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  isMenuOpen: boolean = false; // Variable para controlar si el menú está abierto o cerrado
+  isMenuOpen: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  // Función para alternar la apertura/cierre del menú en vista móvil
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      this.toggleMenu(); // Cierra el menú después de hacer clic en un enlace
+    }
   }
 }

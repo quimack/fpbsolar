@@ -71,13 +71,37 @@
 @media (max-width: 767px) {
   .navbar {
     .nav-links {
-      display: none; // Oculta los elementos del menú principal en vista móvil
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px; // Ajusta según tu diseño
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5); // Cambia el color de fondo según tu diseño
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Añade sombra para dar profundidad
+
+      li {
+        margin: 10px 0;
+
+        a {
+          color: #FFF;
+        }
+      }
     }
+
     .hamburger {
-      display: block; // Muestra el botón de menú hamburguesa en vista móvil
+      display: block;
     }
+
     .btn {
-      display: none; // Oculta el botón "Comenzar" en vista móvil
+      display: none;
+    }
+
+    &.menu-open {
+      .nav-links {
+        display: flex;
+      }
     }
   }
 }

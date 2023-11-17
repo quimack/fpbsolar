@@ -21,9 +21,18 @@
       justify-content: end;
       width: 64%;
 
+
       img {
-        margin-right: 10px; // Ajusta el margen entre los iconos según sea necesario
+        margin-right: 10px;
         width: 2rem;
+        filter: grayscale(100%); // Convierte las imágenes a escala de grises inicialmente
+        transition: filter 0.3s, transform 0.3s; // Añade una transición a la propiedad filter y transform
+
+        &:hover {
+          cursor: pointer;
+          filter: grayscale(0%); // Elimina la escala de grises al pasar el ratón sobre la imagen
+          transform: scale(1.1); // Hace que la imagen se agrande ligeramente al pasar el ratón
+        }
       }
     }
   }
