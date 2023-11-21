@@ -16,6 +16,7 @@ import { QuestionsComponent } from './sections/questions/questions.component';
 import { InstallationComponent } from './sections/installation/installation.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { ProjectsComponent } from './sections/projects/projects.component';
     FooterComponent,
     ProjectsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, BrowserAnimationsModule, CommonModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, BrowserAnimationsModule, CommonModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
