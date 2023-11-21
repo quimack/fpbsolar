@@ -58,6 +58,10 @@ body {
 
 .space-around {
   justify-content: space-around;
+  @media (max-width: 767px) {
+    justify-content: space-between
+
+  }
 }
 
 // BUTTONS AND ANCHORS

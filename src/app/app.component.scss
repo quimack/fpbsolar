@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 
   main {
     background-color: #f1f1f1;
@@ -20,6 +21,7 @@
       right: 1vw;
       z-index: 20;
       mix-blend-mode: multiply;
+
 
       .arrow-up{
         width: 50px;

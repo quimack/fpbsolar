@@ -25,6 +25,10 @@
     z-index: 1;
     top: 0;
     left: -2px;
+    @media (max-width: 767px){
+      left:-4px ;
+    }
+
   }
 
   .steps-wrapper {
