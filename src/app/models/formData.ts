@@ -12,9 +12,9 @@ export enum Place{
 }
 
 export enum MonthlyExpenditure{
-    MENOS_DE_70 = 1,
-    DE_70_A_150 = 2,
-    MAS_DE_150 = 3,
+    MENOS_DE_60 = 1,
+    DE_60_A_140 = 2,
+    MAS_DE_140 = 3,
     NO_LO_SE = 4,
 }
 
