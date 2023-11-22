@@ -146,6 +146,37 @@
       }
     }
   }
+
+  .modal-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(2, 2, 2, 0.4);
+    z-index: 99;
+    
+    .modal{
+      position: relative;
+      border-radius: 16px;
+      background-color: #fff;
+      padding: 5vw;
+      font-family: 'inter', sans-serif;
+
+      .close-icon{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background: center / contain url(../../../assets/icons/close-50-grey.png) no-repeat;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {

@@ -1,4 +1,11 @@
-<section class="wrapper width-100 flex-column align-center" id="formulario" data-aos="zoom-out-up" data-aos-duration="2000">
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+
+<section
+  class="wrapper width-100 flex-column align-center"
+  id="formulario"
+  data-aos="zoom-out-up"
+  data-aos-duration="2000"
+>
   <div class="bckgr"></div>
 
   <main class="steps-wrapper">
@@ -218,4 +225,22 @@
       <img src="../../../assets/icons/next-50.png" alt="Volver" width="60%" />
     </button>
   </main>
+
+  <div class="modal-wrapper" *ngIf="sendedMail">
+    <div class="modal flex-column flex-center">
+      <div class="close-icon" (click)="closeSendedModal()"></div>
+      <h3 class="terciary-color">Sus datos han sido enviados correctamente!</h3>
+      <div class="txt">
+        Gracias por elegirnos, en breve nos pondremos en contacto con tigo.
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-wrapper" *ngIf="errorMail">
+    <div class="modal flex-column flex-center">
+      <div class="close-icon" (click)="closeErrorModal()"></div>
+      <h3 class="terciary-color">Sus datos no han podido enviarse!</h3>
+      <div class="txt">Intente nuevamente.</div>
+    </div>
+  </div>
 </section>

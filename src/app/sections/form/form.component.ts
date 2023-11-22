@@ -7,6 +7,7 @@ import {
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { fadeInOutAnimation } from 'src/assets/animations';
 import { FormService } from 'src/app/services/form.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-form',
@@ -17,11 +18,14 @@ import { FormService } from 'src/app/services/form.service';
 export class FormComponent implements OnInit {
   step: number = 1;
   lastStep: number = 1;
+  sendedMail: boolean = false;
+  errorMail: boolean = false;
+
 
   installationForm = new FormGroup({
-    installationType: new FormControl(null, Validators.required),
-    place: new FormControl(null),
-    monthlyExpenditure: new FormControl(null),
+    installationType: new FormControl(0, Validators.required),
+    place: new FormControl(0),
+    monthlyExpenditure: new FormControl(0),
   });
 
   personalDataForm = new FormGroup({
@@ -39,12 +43,12 @@ export class FormComponent implements OnInit {
     population: new FormControl('', Validators.required),
   });
 
-  constructor(private formService: FormService) {}
+  constructor(private formService: FormService, private spinner: NgxSpinnerService) {}
 
   ngOnInit(): void {
     this.installationForm
       .get('installationType')
-      ?.valueChanges.subscribe((value: InstallationType) => {
+      ?.valueChanges.subscribe((value) => {
         this.lastStep = Number(this.step);
         if (value === InstallationType.HOGAR) {
           this.step = 2;
@@ -67,7 +71,6 @@ export class FormComponent implements OnInit {
   }
 
   setInstallationType(typeId: InstallationType) {
-    console.log('aslj', typeId);
     this.installationForm.get('installationType')?.setValue(typeId);
   }
 
@@ -140,16 +143,51 @@ export class FormComponent implements OnInit {
       monthly_expenditure: monthly_expenditure,
     };
 
-    console.log(payload);
+    this.sendEmail(payload)   
+  }
+
+  sendEmail(payload: any){
+    this.spinner.show()
     this.formService.sendEmail(payload).subscribe({
       next: (data) => {
-        console.log(data);
+        this.spinner.hide()
+        this.sendedMail = true;
+
+        this.installationForm.patchValue({
+          installationType: null,
+          place: null,
+          monthlyExpenditure: null,
+        })
+
+        this.personalDataForm.patchValue({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          cp: "",
+          population: "",
+        })
       },
       error: (error) => {
-        console.log(error);
+        this.spinner.hide();
+        const status = error?.status;
+        
+        if (status) {
+          this.errorMail = true;
+          console.log(error);
+        }
       },
       complete: () => {},
     });
+  }
+
+  closeSendedModal(){
+    this.sendedMail = false;
+  }
+
+
+  closeErrorModal(){
+    this.errorMail = false;
   }
 
   backStep() {

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
@@ -17,6 +17,7 @@ import { InstallationComponent } from './sections/installation/installation.comp
 import { FooterComponent } from './components/footer/footer.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,16 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ProjectsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, BrowserAnimationsModule, CommonModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    CommonModule,
+    HttpClientModule,
+    NgxSpinnerModule,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent],
 })
