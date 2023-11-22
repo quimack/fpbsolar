@@ -154,9 +154,9 @@ export class FormComponent implements OnInit {
         this.sendedMail = true;
 
         this.installationForm.patchValue({
-          installationType: null,
-          place: null,
-          monthlyExpenditure: null,
+          installationType: 0,
+          place: 0,
+          monthlyExpenditure: 0,
         })
 
         this.personalDataForm.patchValue({
