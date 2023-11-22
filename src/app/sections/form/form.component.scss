@@ -6,29 +6,17 @@
   padding-bottom: 7em;
   padding-top: 5em;
   position: relative;
+  
   .bckgr {
-    height: 50vh;
+    height: 100vh;
     width: 100vw;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0), $light),
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $light),
+      linear-gradient(to top, rgba(255, 255, 255, 0), $light),
       url(../../../assets/images/memphis_1.png);
     position: absolute;
     z-index: 1;
     top: -50vh;
-  }
-
-  .bckgr2 {
-    height: 50vh;
-    width: 100vw;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $light),
-      url(../../../assets/images/memphis_1.png);
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: -2px;
-    @media (max-width: 767px){
-      left:-4px ;
-    }
-
+    left: 0px;
   }
 
   .steps-wrapper {
@@ -175,9 +163,8 @@
     .steps-wrapper {
       height: 80%;
     }
-    .form-wrapper{
+    .form-wrapper {
       width: 100%;
     }
-
   }
 }

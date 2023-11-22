@@ -26,10 +26,7 @@ section {
   .places-wrapper {
     padding: 2.5em 0 2.5em 0.7em;
     @media (max-width: 767px) {
-      .places-wrapper {
-        padding: 2.5em 0 2.5em 0em;
-      }
-
+      padding: 2.5em 0;
     }
     .places {
       padding: 0 1em;
@@ -52,9 +49,12 @@ section {
 }
 
 @media (max-width: 767px) {
-
-    .space-between {
-      flex-direction: column;
+  div.responsive{
+    div.space-around{
+      justify-content: space-between;
     }
-
+  }
+  .space-between {
+    flex-direction: column;
+  }
 }
