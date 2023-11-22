@@ -13,6 +13,6 @@ export class FormService {
   constructor(private http: HttpClient) {}
 
   sendEmail(data: any): Observable<any> {
-    return this.http.post(`${this.url}/email`, JSON.stringify(data));
+    return this.http.post(`${this.url}`, JSON.stringify(data));
   }
 }

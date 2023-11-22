@@ -123,7 +123,7 @@ export class FormComponent implements OnInit {
     if(this.installationForm.get('monthlyExpenditure')?.value === MonthlyExpenditure.MAS_DE_140){
       monthly_expenditure = "Más de 140€"
     }
-    if(this.installationForm.get('monthlyExpenditure')?.value === MonthlyExpenditure.MAS_DE_140){
+    if(this.installationForm.get('monthlyExpenditure')?.value === MonthlyExpenditure.NO_LO_SE){
       monthly_expenditure = "No lo sé"
     }
 
