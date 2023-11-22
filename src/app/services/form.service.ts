@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class FormService {
-  private url = "http://localhost:3000/sendEmail.php";
+  private url = "https://backend.fpbsolar.com/sendEmail.php";
 
   constructor(private http: HttpClient) {}
 
