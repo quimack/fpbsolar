@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -8,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class FormService {
-  private url = environment.apiUrl;
+  private url = "http://localhost:3000/sendEmail.php";
 
   constructor(private http: HttpClient) {}
 
